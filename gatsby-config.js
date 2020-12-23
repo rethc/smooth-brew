@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Smooth Brew Coffee Shop`,
+    title: `Smooth Brew`,
     description: `The freshest cofffe shop in Wellington!`,
     author: `@rethc`,
   },
