@@ -14,7 +14,7 @@ export default function BackgroundSection({
       </h1>
       {children}
     </BackgroundImage>
-  )
+  );
 }
 
 BackgroundSection.defaultProps = {

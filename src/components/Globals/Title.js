@@ -7,5 +7,5 @@ export default function Title({ title }) {
         <h1 className="display-5 text-capitalize font-weight-bold">{title}</h1>
       </div>
     </div>
-  )
+  );
 }

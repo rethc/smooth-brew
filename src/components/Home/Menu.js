@@ -62,7 +62,7 @@ export default class Menu extends Component {
                     >
                       {category}
                     </button>
-                  )
+                  );
                 })}
               </div>
             </div>
@@ -94,12 +94,12 @@ export default class Menu extends Component {
                       </p>
                     </div>
                   </div>
-                )
+                );
               })}
             </div>
           </div>
         </section>
-      )
+      );
     } else {
       return (
         <div id="menu">
@@ -116,7 +116,7 @@ export default class Menu extends Component {
             </div>
           </section>
         </div>
-      )
+      );
     }
   }
 }

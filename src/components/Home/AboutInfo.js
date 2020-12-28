@@ -19,5 +19,5 @@ export default function AboutInfo() {
         </div>
       </div>
     </section>
-  )
+  );
 }

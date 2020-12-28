@@ -20,7 +20,7 @@ export default function Info() {
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-            <Link to="/about/">
+            <Link to="/about">
               <button className="btn text-uppercase btn-yellow">
                 Visit Us
               </button>
@@ -29,5 +29,5 @@ export default function Info() {
         </div>
       </div>
     </section>
-  )
+  );
 }
