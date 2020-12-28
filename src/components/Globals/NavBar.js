@@ -42,16 +42,10 @@ export default class NavBar extends Component {
                 </button>
                 <div className={this.state.css}>
                     <ul className="navbar-nav mx-auto">
-                        {this.state.links.map(link => {
-                            return (
-                                <li key={link.id} className="nav-item">
-                                    <Link to={link.path} className="nav-link text-capitalize">
-                                        {link.text}
-                                    </Link>
-                                </li>
-                            );
-                        })}
-                        <AnchorLink to="/#menu" className="nav-link text-capitalize" title="Menu" />
+                        <Link to="/" className="nav-link">Home</Link>
+                        <AnchorLink to="/#menu" className="nav-link" title="Menu" />
+                        <AnchorLink to="/#our-story" className="nav-link" title="Our Story" />
+                        <Link to="/about" className="nav-link" title="About">About</Link>
                         <li className="nav-item ml-sm-5">
                             <FaCartArrowDown className="cart-icon" />
                         </li>
