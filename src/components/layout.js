@@ -13,15 +13,16 @@ import Footer from "./Globals/Footer";
 import "./bootstrap.min.css";
 import "./layout.css";
 
-const Layout = ({ children }) =>
+const Layout = ({ children }) => (
   <>
     <Navbar />
     {children}
     <Footer />
-  </>;
+  </>
+);
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+  children: PropTypes.node.isRequired
+};
 
 export default Layout
