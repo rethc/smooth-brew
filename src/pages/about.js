@@ -1,20 +1,20 @@
 import React from "react"
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import BackgroundSection from "../components/Globals/BackgroundSection";
-import Info from "../components/Home/Info";
+import AboutInfo from "../components/Home/AboutInfo";
 
 const AboutPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="About us" />
     <BackgroundSection
       img={data.img.childImageSharp.fluid}
       title="About us"
       styleClass="about-background"
     />
-    <Info />
+    <AboutInfo />
   </Layout>
 );
 

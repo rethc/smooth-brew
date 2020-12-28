@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Title from "../Globals/Title";
 import Img from "gatsby-image";
-import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const getCategories = items => {
     let tempItems = items.map(items => {
@@ -46,8 +45,9 @@ export default class Menu extends Component {
             return (
                 <section className="menu py-5">
                     <div className="container">
-                        <a id="menu"></a>
-                        <Title title="Menu" />
+                        <a id="menu">
+                            <Title title="Menu" />
+                        </a>
                         {/* ===== CATEGORIES ===== */}
                         <div className="row mb-4">
                             <div className="col-10 mx-auto text-center">
