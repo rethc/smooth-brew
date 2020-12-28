@@ -69,3 +69,11 @@ h6 {
 .menu {
   background: var(--mainGrey);
 }
+
+.product-cards {
+  min-height: 100%;
+}
+
+.product-image {
+  max-height: 210px;
+}
