@@ -24,6 +24,12 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
       }
     },
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -90
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

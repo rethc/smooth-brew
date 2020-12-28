@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "gatsby";
 import logo from "../../images/logo.svg";
 import { FaCartArrowDown } from "react-icons/fa";
-
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 export default class NavBar extends Component {
     state = {
@@ -51,6 +51,7 @@ export default class NavBar extends Component {
                                 </li>
                             );
                         })}
+                        <AnchorLink to="/#menu" className="nav-link text-capitalize" title="Menu" />
                         <li className="nav-item ml-sm-5">
                             <FaCartArrowDown className="cart-icon" />
                         </li>

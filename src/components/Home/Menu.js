@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Title from "../Globals/Title";
 import Img from "gatsby-image";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const getCategories = items => {
     let tempItems = items.map(items => {
@@ -41,12 +42,12 @@ export default class Menu extends Component {
     };
 
     render() {
-
         if (this.state.items.length > 0) {
             return (
                 <section className="menu py-5">
                     <div className="container">
-                        <Title title="Best of our Menu" />
+                        <a id="menu"></a>
+                        <Title title="Menu" />
                         {/* ===== CATEGORIES ===== */}
                         <div className="row mb-4">
                             <div className="col-10 mx-auto text-center">
@@ -88,20 +89,22 @@ export default class Menu extends Component {
                         </div>
                     </div>
                 </section >
-
             );
         }
         else {
-            return (<section className="menu py-5">
-                <div className="container">
-                    <Title title="Best of our Menu" />
-                    <div className="row">
-                        <div className="col-10 col-sm-6 mx-auto text-center">
-                            <p className="lead text-muted mb-5">There are no items to display.</p>
+            return (
+                <a name="menu">
+                    <section className="menu py-5">
+                        <div className="container">
+                            <Title title="Menu" />
+                            <div className="row">
+                                <div className="col-10 col-sm-6 mx-auto text-center">
+                                    <p className="lead text-muted mb-5">There are no items to display.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </section>);
+                    </section>
+                </a>);
         }
     }
 }
