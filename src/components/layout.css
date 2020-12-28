@@ -1,6 +1,7 @@
 :root {
   --mainBrown: #2d1e1f;
   --mainYellow: rgb(255, 158, 9);
+  --secondaryYellow: rgb(255, 99, 9);
   --mainGrey: #ece8dc;
   --mainWhite: #fff;
   --mainDark: #222;
@@ -24,6 +25,10 @@ h6 {
 
 .text-yellow {
   color: var(--mainYellow);
+}
+
+.text-price {
+  color: var(--secondaryYellow);
 }
 
 .cart-icon {
@@ -59,4 +64,8 @@ h6 {
 
 .footer {
   background: var(--mainBrown);
+}
+
+.menu {
+  background: var(--mainGrey);
 }

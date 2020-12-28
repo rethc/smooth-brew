@@ -2,24 +2,58 @@ import React, { Component } from "react";
 import Title from "../Globals/Title";
 import Img from "gatsby-image";
 
+const getCategories = items => {
+    let tempItems = items.map(items => {
+        return items.node.category;
+    });
+    //The Set object lets you store unique values of any type, whether primitive values or object references.
+    let tempCategories = new Set(tempItems);
+    //The Array.from() static method creates a new, shallow-copied Array instance from an array-like or iterable object.
+    let categories = Array.from(tempCategories);
+    categories = ['all', ...categories];
+
+    return categories;
+};
+
 export default class Menu extends Component {
     constructor(props) {
         super(props);
         this.state = {
             items: props.items.edges,
-            coffeeItems: props.items.edges
+            coffeeItems: props.items.edges,
+            categories: getCategories(props.items.edges)
         };
-
     }
 
+    handleItems = category => {
+
+    };
+
     render() {
+
         if (this.state.items.length > 0) {
             return (
                 <section className="menu py-5">
                     <div className="container">
                         <Title title="Best of our Menu" />
-                        {/* categories */}
-                        {/* items */}
+                        {/* ===== CATEGORIES ===== */}
+                        <div className="row mb-4">
+                            <div className="col-10 mx-auto text-center">
+                                {this.state.categories.map((category, index) => {
+                                    return (
+                                        <button type="button"
+                                            key={index}
+                                            className="btn btn-yellow text-capitalize m-3"
+                                            onClick={() => {
+                                                this.handleItems(category);
+                                            }}
+                                        >
+                                            {category}
+                                        </button>);
+                                })}
+                            </div>
+                        </div>
+                        {/* ===== ITEMS ===== */}
                         <div className="row">
                             {this.state.coffeeItems.map(({ node }) => {
                                 return (
@@ -27,11 +61,11 @@ export default class Menu extends Component {
                                         <div>
                                             <Img fixed={node.image.fixed} />
                                         </div>
-                                        {/* item text */}
+                                        {/* ===== ITEM TEXT ===== */}
                                         <div className="flex-grow-1 px-3">
                                             <div className="d-flex justify-content-between">
-                                                <h6 className="mb-0">{node.title}</h6>
-                                                <h6 className="mb-0">${node.price}</h6>
+                                                <h6 className="mb-0"><small><b>{node.title}</b></small></h6>
+                                                <h6 className="mb-0 text-price"><small>${node.price}</small></h6>
                                             </div>
                                             <p className="text-muted">
                                                 <small>{node.description.description}</small>
@@ -42,7 +76,7 @@ export default class Menu extends Component {
                             })}
                         </div>
                     </div>
-                </section>
+                </section >
 
             );
         }
