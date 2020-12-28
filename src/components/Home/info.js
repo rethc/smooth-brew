@@ -1,10 +1,10 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import Title from '../Globals/Title'
+import React from "react";
+import { Link } from "gatsby";
+import Title from "../Globals/Title";
 
-export default function info() {
+export default function Info() {
     return (
-        <section class="py-5">
+        <section className="py-5">
             <div className="container">
                 <Title title="our story"></Title>
                 <div className="row">
