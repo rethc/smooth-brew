@@ -21,7 +21,7 @@ const getProducts = graphql`
       }
     }
   }
-`
+`;
 
 export default function Products() {
   return (
@@ -30,7 +30,14 @@ export default function Products() {
       render={data => {
         return (
           <section className="py-5">
-            <div className="container"></div>
+            <div className="container">
+              <Title title="Products" />
+              <div className="row">
+                {data.products.edges.map(({ node: product }) => {
+                  return <Product key={product.id} product={product} />;
+                })}
+              </div>
+            </div>
           </section>
         )
       }}
