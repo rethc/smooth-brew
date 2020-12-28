@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BackgroundSection from "../components/Globals/BackgroundSection"
-import Info from "../components/Home/Info"
+import Info from "../components/Home/info"
 import Menu from "../components/Home/Menu"
 import Products from "../components/Home/Products"
 
