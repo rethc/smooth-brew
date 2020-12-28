@@ -21,7 +21,15 @@ export default class Menu extends Component {
                         {/* categories */}
                         {/* items */}
                         <div className="row">
-
+                            {this.state.coffeeItems.map(({ node }) => {
+                                return (
+                                    <div key={node.id} className="col-11 col-md-6 my-3 d-flex mx-auto">
+                                        <div>
+                                            <Img fixed={node.image.fixed} />
+                                        </div>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </section>
