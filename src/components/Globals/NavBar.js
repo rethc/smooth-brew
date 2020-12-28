@@ -67,7 +67,6 @@ export default class NavBar extends Component {
               className="nav-link"
               title="Our Story"
             />
-
             <Link to="/about" className="nav-link" title="About">
               About
             </Link>

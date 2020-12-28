@@ -10,6 +10,7 @@ export default function AboutInfo() {
         <div className="row">
           <div className="col-10 col-sm-8 mx-auto text-center">
             <p className="lead text-muted mb-5">Find us in welllington!</p>
+
             <Link to="/Contact/">
               <button className="btn text-uppercase btn-yellow">
                 Contact Us
