@@ -52,12 +52,22 @@ export default class NavBar extends Component {
             <Link to="/" className="nav-link">
               Home
             </Link>
-            <AnchorLink to="/#menu" className="nav-link" title="Menu" />
+            <AnchorLink
+              to="/#menu"
+              className="nav-link"
+              title="Menu"
+            />
+            <AnchorLink
+              to="/#products"
+              className="nav-link"
+              title="Products"
+            />
             <AnchorLink
               to="/#our-story"
               className="nav-link"
               title="Our Story"
             />
+
             <Link to="/about" className="nav-link" title="About">
               About
             </Link>
