@@ -7,19 +7,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 export default class NavBar extends Component {
   state = {
     navbarOpen: false,
-    css: "collapse navbar-collapse",
-    links: [
-      {
-        id: 1,
-        path: "/",
-        text: "home",
-      },
-      {
-        id: 2,
-        path: "/about",
-        text: "about",
-      },
-    ],
+    css: "collapse navbar-collapse"
   }
 
   navbarHandler = () => {
@@ -71,7 +59,7 @@ export default class NavBar extends Component {
               About
             </Link>
             <li className="nav-item ml-sm-5">
-              <FaCartArrowDown className="cart-icon" />
+              <FaCartArrowDown className="cart-icon snipcart-checkout" />
             </li>
           </ul>
         </div>

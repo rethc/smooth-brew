@@ -25,6 +25,12 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-plugin-snipcart',
+      options: {
+        apiKey: process.env.GATSBY_SNIPCART_APIKEY
+      }
+    },
+    {
       resolve: "gatsby-plugin-anchor-links",
       options: {
         offset: -50

@@ -46,7 +46,7 @@ export default function Contact() {
                             </div>
                             {/* SUBMIT */}
                             <div className="form-group">
-                                <button type="submit" className="btn btn-yellow btn-block mt-5">Submit</button>
+                                <button type="submit" className="btn btn-yellow-menu btn-block mt-5">Submit</button>
                             </div>
                         </form>
                     </div>

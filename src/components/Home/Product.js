@@ -10,7 +10,13 @@ export default function Product({ product }) {
                     <h6>{product.title}</h6>
                     <h6>${product.price}</h6>
                     <button
-                        className="btn btn-yellow mt-3">
+                        className="btn btn-yellow mt-3 snipcart-add-item"
+                        data-item-id={product.id}
+                        data-item-name={product.title}
+                        data-item-price={product.price}
+                        data-item-image={product.image.fluid.src}
+                        data-item-url="https://smooth-brew.netlify.app/"
+                    >
                         Add to Cart
                     </button>
                 </div>
