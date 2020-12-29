@@ -67,7 +67,7 @@ _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This
 
 ## 💼 Configuration
 
-1. **Set up Contentful*
+1. **Set up Contentful**
 
 Go to [Contentful](https://www.contentful.com/) and create a free account. Once you sign in, go to your Content Models and create your menu and products.
 
@@ -79,7 +79,7 @@ Example:
 
 In your `gatsby-config.js` file, add your Contenful API to the `CONTENTFUL_ACCESS_TOKEN` and `CONTENTFUL_SPACE_ID` field in the environment variables. Learn more in the [Gatsby documentation](https://www.gatsbyjs.com/docs/how-to/local-development/environment-variables/).
 
-2. **Set up Snipcart*
+2. **Set up Snipcart**
 
 Go to [Snipcart](https://snipcart.com/) and create a free account. Once you sign in, go to your Dashboard, API keys submenu and copy your Public Test API key.
 
