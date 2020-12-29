@@ -63,7 +63,7 @@ gatsby develop
 
 Your site is now running at `http://localhost:8000`!
 
-_Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+_Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
 ## 💼 Configuration
 
@@ -75,7 +75,13 @@ Example:
 
 <img height="400" alt="smooth-brew" src="http://iforce.co.nz/i/gvrljcpg.vf3.png">
 
-```
+<img height="400" alt="smooth-brew" src="http://iforce.co.nz/i/grsmbg5z.eqd.png">
+
+In your `gatsby-config.js` file, add your Contenful API to the `CONTENTFUL_ACCESS_TOKEN` and `CONTENTFUL_SPACE_ID` field in the environment variables. Learn more in the [Gatsby documentation](https://www.gatsbyjs.com/docs/how-to/local-development/environment-variables/).
+
+
+
+
 
 ## 📝 License
 Licensed under the [MIT License](https://github.com/rethc/smooth-brew/blob/master/LICENSE).
