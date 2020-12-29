@@ -3,7 +3,7 @@
   --mainYellow: rgb(255, 158, 9);
   --secondaryYellow: rgb(255, 99, 9);
   --mainGrey: #ece8dc;
-  --mainWhite: #fff;
+  --mainWhite: #f7f7f7;
   --mainDark: #222;
 }
 
@@ -53,13 +53,20 @@ h6 {
   min-height: 60vh;
 }
 
-.btn-yellow {
+.btn-yellow,
+.btn-yellow-menu {
   color: var(--mainYellow);
   border-color: var(--mainYellow);
 }
+
+.btn-yellow-menu:hover,
 .btn-yellow:hover {
   background: var(--mainYellow);
   color: var(--mainBrown);
+}
+
+.btn-yellow-menu {
+  background-color: var(--mainWhite);
 }
 
 .footer {
