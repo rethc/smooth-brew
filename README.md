@@ -12,7 +12,7 @@
   </a>
 </p>
 
-Smooth brew is a responsive starter theme that leverages [Gatsby v2](https://www.gatsbyjs.org) and [Contentful](https://www.contentful.com/) for an online coffee shop.
+Smooth brew is a responsive starter theme for an online coffee shop, powered by [Gatsby v2](https://www.gatsbyjs.org).
 
 <img height="800" alt="smooth-brew" src="http://iforce.co.nz/i/my2iazzm.43w.png">
 
@@ -31,6 +31,7 @@ Smooth brew is a responsive starter theme that leverages [Gatsby v2](https://www
 ## ⚛️ Built using
 
 - Gatsby v2
+- Bootstrap v4 
 - Contentful Headless CMS
 - Deployed on Netlify
 - Snipcart eCommerce integration
