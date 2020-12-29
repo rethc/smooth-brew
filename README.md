@@ -38,7 +38,7 @@ Smooth brew is a responsive starter theme that leverages [Gatsby v2](https://www
 Use the Gatsby CLI to create a new site, specifying this project. If you don't have the CLI installed already, see [Gastby instructions](https://www.gatsbyjs.org/tutorial/part-zero/#using-the-gatsby-cli).
 
 ```sh
-gatsby new YOUR-PROJECT-NAME https://github.com/margueriteroth/gatsby-prismic-starter-prist
+gatsby new YOUR-PROJECT-NAME https://github.com/rethc/smooth-brew
 ```
 
 2. **Start developing.**
