@@ -1,4 +1,3 @@
-
 <h1 align="center">
   Coffee Shop Webstite - Smooth Brew
 </h1>
@@ -27,9 +26,9 @@ Smooth brew is a responsive starter theme that leverages [Gatsby v2](https://www
 - The about us page helps the coffee company make a good first impression
 - The contact us component allows visitors to leave a message.
 - Google Analytics
-- Responsive and mobile ready   
+- Responsive and mobile ready
 
-## ⚛️ Built using 
+## ⚛️ Built using
 
 - Gatsby v2
 - Contentful Headless CMS
@@ -87,13 +86,10 @@ In your `gatsby-config.js` file, add the your Snipcart API to the `GATSBY_SNIPCA
 
 3. **Set up Getform**
 
-Go to [Getform](https://getform.io/) and create a free account. 
+Go to [Getform](https://getform.io/) and create a free account.
 
 In your `Contact.js` file, replace the line `<form action="URL" method="POST">` with the URL that is linked to your Getform account.
 
-
 ## 📝 License
+
 Licensed under the [MIT License](https://github.com/rethc/smooth-brew/blob/master/LICENSE).
-
-
-
