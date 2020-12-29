@@ -1,6 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 
+
 export default function Product({ product }) {
     return (
         <div className="col-10 col-sm-8 col-md-6 col-lg-4 mx-auto my-3">
@@ -21,6 +22,6 @@ export default function Product({ product }) {
                     </button>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
