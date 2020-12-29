@@ -13,7 +13,7 @@
   </a>
 </p>
 
-Smooth brew is a responsive starter theme powered by [Gatsby v2](https://www.gatsbyjs.org) and [Contentful](https://www.contentful.com/) for an online coffee shop.
+Smooth brew is a responsive starter theme that leverages [Gatsby v2](https://www.gatsbyjs.org) and [Contentful](https://www.contentful.com/) for an online coffee shop.
 
 <img height="800" alt="smooth-brew" src="http://iforce.co.nz/i/my2iazzm.43w.png">
 
@@ -32,3 +32,30 @@ Smooth brew is a responsive starter theme powered by [Gatsby v2](https://www.gat
 ## 🚀 Getting Started
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/rethc/smooth-brew)
+
+1. **Create a Gatsby site.**
+
+Use the Gatsby CLI to create a new site, specifying this project. If you don't have the CLI installed already, see [Gastby instructions](https://www.gatsbyjs.org/tutorial/part-zero/#using-the-gatsby-cli).
+
+```sh
+gatsby new YOUR-PROJECT-NAME https://github.com/margueriteroth/gatsby-prismic-starter-prist
+```
+
+2. **Start developing.**
+
+Navigate into your new site's directory, install the npm modules, and start the gatsby development server.
+
+```sh
+cd YOUR-PROJECT-NAME
+npm install
+gatsby develop
+```
+
+3. **Open the code in your favourite editor and start customizing!**
+
+Your site is now running at `http://localhost:8000`!
+
+_Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+
+
+
