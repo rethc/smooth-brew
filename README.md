@@ -23,11 +23,19 @@ Smooth brew is a responsive starter theme that leverages [Gatsby v2](https://www
 
 - Landing page with customizable About, Contact, Menu, and Product components.
 - The menu is a list of beverages offered to customers and the prices.
-- The product is a list of coffee products that is being offered for online purchase (powered by [Snipcart](https://snipcart.com/)
+- The product is a list of coffee products that is being offered for online purchase.
 - The about us page helps the coffee company make a good first impression
-- The contact us component allows visitors to leave a message (powered by [Getform](https://getform.io/))
+- The contact us component allows visitors to leave a message.
 - Google Analytics
 - Responsive and mobile ready   
+
+## ⚛️ Built using 
+
+- Gatsby v2
+- Contentful Headless CMS
+- Deployed on Netlify
+- Snipcart eCommerce integration
+- Getform
 
 ## 🚀 Getting Started
 
