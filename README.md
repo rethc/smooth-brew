@@ -65,6 +65,17 @@ Your site is now running at `http://localhost:8000`!
 
 _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
+## 💼 Configuration
+
+1. **Create account and repo**
+
+Go to [Contentful](https://www.contentful.com/) and create a free account. Once you sign in, go to your Content Models and create your menu and products.
+
+Example:
+
+<img height="400" alt="smooth-brew" src="http://iforce.co.nz/i/gvrljcpg.vf3.png">
+
+```
 
 ## 📝 License
 Licensed under the [MIT License](https://github.com/rethc/smooth-brew/blob/master/LICENSE).
