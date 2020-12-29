@@ -30,3 +30,5 @@ Smooth brew is a responsive starter theme powered by [Gatsby v2](https://www.gat
 - Responsive and mobile ready   
 
 ## 🚀 Getting Started
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/rethc/smooth-brew)
