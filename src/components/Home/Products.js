@@ -30,7 +30,7 @@ export default function Products() {
       render={data => {
         return (
           <section className="py-5">
-            <div className="container">
+            <div className="container" id="products">
               <Title title="Products" />
               <div className="row">
                 {data.products.edges.map(({ node: product }) => {
