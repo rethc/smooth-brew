@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => (
   <div className="application">
     <Helmet>
       <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans+Condensed:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans+Condensed:wght@700&family=Roboto:wght@300;400;500;700&family=Cabin&display=swap" rel="stylesheet" />
     </Helmet>
     <Layout>
       <SEO title="Home" />
