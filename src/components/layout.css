@@ -1,5 +1,5 @@
 :root {
-  --mainBrown: #2d1e1f;
+  --mainBrown: #352627;
   --mainYellow: rgb(255, 158, 9);
   --secondaryYellow: rgb(255, 99, 9);
   --mainGrey: #ece8dc;
@@ -10,17 +10,8 @@
 body {
   background: var(--mainWhite);
   color: var(--mainDark);
-  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Courier New", Courier, monospace !important;
-  letter-spacing: 0.25rem !important;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .text-yellow {
