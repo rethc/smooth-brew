@@ -1,25 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
-//import "./bootstrap.min.css";
-//import "./layout.css";
 import { Link } from "gatsby";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 import logo from "../images/logo.svg";
-
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import MenuIcon from "@material-ui/icons/Menu";
-import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import Container from "@material-ui/core/Container";
-import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { makeStyles } from "@material-ui/core/styles";
 import SideDrawer from "./SideDrawer";
 import Hidden from "@material-ui/core/Hidden";
 import HideOnScroll from "./HideOnScroll";
-
+import Grid from "@material-ui/core/Grid";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import HomeIcon from "@material-ui/icons/Home";
+import LinkedinIcon from "@material-ui/icons/LinkedIn";
 
 import "./layout.css";
 
@@ -39,6 +36,21 @@ const useStyles = makeStyles({
   navbarDisplayFlex: {
     display: `flex`,
     justifyContent: `space-between`
+  },
+  footer: {
+    backgroundColor: "#352627",
+    width: "100%",
+    position: "relative",
+    overflow: "hidden",
+    padding: "1em 0 ",
+  },
+  socialButtons: {
+    color: "#f7f7f7",
+  },
+  copyright: {
+    color: "#D38D5F",
+    marginTop: "0.25em",
+    textAlign: "center"
   }
 });
 
@@ -64,7 +76,6 @@ const Layout = ({ children }) => {
                     <Typography variant="h6">
                       <AnchorLink
                         to="/#menu"
-                        className="nav-link"
                         title="Menu"
                         className={classes.linkText}
                       />
@@ -74,7 +85,6 @@ const Layout = ({ children }) => {
                     <Typography variant="h6">
                       <AnchorLink
                         to="/#products"
-                        className="nav-link"
                         title="Products"
                         className={classes.linkText}
                       />
@@ -84,7 +94,6 @@ const Layout = ({ children }) => {
                     <Typography variant="h6" noWrap="false">
                       <AnchorLink
                         to="/#our-story"
-                        className="nav-link"
                         title="Our Story"
                         className={classes.linkText}
                       />
@@ -94,7 +103,6 @@ const Layout = ({ children }) => {
                     <Typography variant="h6">
                       <Link
                         to="/about"
-                        className="nav-link"
                         title="About"
                         className={classes.linkText}
                       >
@@ -111,26 +119,44 @@ const Layout = ({ children }) => {
           </Toolbar>
         </AppBar>
       </HideOnScroll>
-
       {children}
-      <footer className="footer py-3">
-        <div className="container">
-          <div className="row">
-            <div className="col-10 mx-auto col-md-6 text-yellow text-center">
-              <h6>
-                <small>
-                  &copy;{new Date().getFullYear().toString()} Chesda Reth. All
-                rights reserved.
-              </small>
-              </h6>
-            </div>
-          </div>
-        </div>
+      <footer className={classes.footer}>
+        <Container>
+          <Grid item container spacing={2} justify="center">
+            <Grid
+              item
+              component={"a"}
+              target="_blank"
+              href="https://reth.nz"
+            >
+              <HomeIcon className={classes.socialButtons} fontSize="large" />
+            </Grid>
+            <Grid
+              item
+              component={"a"}
+              target="_blank"
+              href="https://github.com/rethc"
+            >
+              <GitHubIcon className={classes.socialButtons} fontSize="large" />
+            </Grid>
+            <Grid
+              item
+              component={"a"}
+              target="_blank"
+              href="https://www.linkedin.com/in/chesda-reth-8427741b3"
+            >
+              <LinkedinIcon className={classes.socialButtons} fontSize="large" />
+            </Grid>
+          </Grid>
+          <Typography className={classes.copyright}>
+
+            &copy;{new Date().getFullYear().toString()} Chesda Reth. All rights reserved.
+             </Typography>
+        </Container>
       </footer>
     </>
   );
 };
-
 Layout.propTypes = {
   children: PropTypes.node.isRequired
 };
