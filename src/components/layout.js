@@ -18,6 +18,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { makeStyles } from "@material-ui/core/styles";
 import SideDrawer from "./SideDrawer";
 import Hidden from "@material-ui/core/Hidden";
+import HideOnScroll from "./HideOnScroll";
 
 
 import "./layout.css";
@@ -45,69 +46,71 @@ const Layout = ({ children }) => {
   const classes = useStyles();
   return (
     <>
-      <AppBar position="sticky" className={classes.appBar}>
-        <Toolbar>
-          <Container maxWidth="xl" className={classes.navbarDisplayFlex}>
-            <Link to="/">
-              <img src={logo} alt="Smooth Brew Logo" />
-            </Link>
+      <HideOnScroll>
+        <AppBar position="fixed" className={classes.appBar}>
+          <Toolbar>
+            <Container maxWidth="xl" className={classes.navbarDisplayFlex}>
+              <Link to="/">
+                <img src={logo} alt="Smooth Brew Logo" />
+              </Link>
 
-            <Hidden smDown>
-              <List
-                component="nav"
-                aria-labelledby="main navigation"
-                className={classes.navDisplayFlex}
-              >
-                <ListItem button>
-                  <Typography variant="h6">
-                    <AnchorLink
-                      to="/#menu"
-                      className="nav-link"
-                      title="Menu"
-                      className={classes.linkText}
-                    />
-                  </Typography>
-                </ListItem>
-                <ListItem button>
-                  <Typography variant="h6">
-                    <AnchorLink
-                      to="/#products"
-                      className="nav-link"
-                      title="Products"
-                      className={classes.linkText}
-                    />
-                  </Typography>
-                </ListItem>
-                <ListItem button>
-                  <Typography variant="h6" noWrap="false">
-                    <AnchorLink
-                      to="/#our-story"
-                      className="nav-link"
-                      title="Our Story"
-                      className={classes.linkText}
-                    />
-                  </Typography>
-                </ListItem>
-                <ListItem button>
-                  <Typography variant="h6">
-                    <Link
-                      to="/about"
-                      className="nav-link"
-                      title="About"
-                      className={classes.linkText}
-                    >
-                      About
+              <Hidden smDown>
+                <List
+                  component="nav"
+                  aria-labelledby="main navigation"
+                  className={classes.navDisplayFlex}
+                >
+                  <ListItem button>
+                    <Typography variant="h6">
+                      <AnchorLink
+                        to="/#menu"
+                        className="nav-link"
+                        title="Menu"
+                        className={classes.linkText}
+                      />
+                    </Typography>
+                  </ListItem>
+                  <ListItem button>
+                    <Typography variant="h6">
+                      <AnchorLink
+                        to="/#products"
+                        className="nav-link"
+                        title="Products"
+                        className={classes.linkText}
+                      />
+                    </Typography>
+                  </ListItem>
+                  <ListItem button>
+                    <Typography variant="h6" noWrap="false">
+                      <AnchorLink
+                        to="/#our-story"
+                        className="nav-link"
+                        title="Our Story"
+                        className={classes.linkText}
+                      />
+                    </Typography>
+                  </ListItem>
+                  <ListItem button>
+                    <Typography variant="h6">
+                      <Link
+                        to="/about"
+                        className="nav-link"
+                        title="About"
+                        className={classes.linkText}
+                      >
+                        About
                  </Link>
-                  </Typography>
-                </ListItem>
-              </List>
-            </Hidden>
-            <Hidden mdUp>
-              <SideDrawer />
-            </Hidden>
-          </Container>
-        </Toolbar>
-      </AppBar>
+                    </Typography>
+                  </ListItem>
+                </List>
+              </Hidden>
+              <Hidden mdUp>
+                <SideDrawer />
+              </Hidden>
+            </Container>
+          </Toolbar>
+        </AppBar>
+      </HideOnScroll>
 
       {children}
       <footer className="footer py-3">
