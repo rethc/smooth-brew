@@ -1,11 +1,24 @@
 import React from "react"
+import Typography from "@material-ui/core/Typography"
+import { makeStyles } from "@material-ui/core/styles";
 
-export default function Title({ title }) {
+const useStyles = makeStyles({
+  title: {
+    paddingTop: "0.8em",
+    fontFamily: "Merriweather",
+    textAlign: "center",
+    color: "#352627",
+  }
+});
+
+
+const Title = ({ title }) => {
+  const classes = useStyles();
   return (
-    <div className="row">
-      <div className="col text-center mb-3">
-        <h1 className="display-5 text-capitalize font-weight-bold">{title}</h1>
-      </div>
-    </div>
+    <Typography variant="h4" className={classes.title}>
+      {title}
+    </Typography>
   );
 }
+
+export default Title;

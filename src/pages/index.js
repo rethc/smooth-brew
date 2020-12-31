@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BackgroundSection from "../components/Globals/BackgroundSection"
-import Info from "../components/Home/info"
+import Story from "../components/Home/Story"
 import Menu from "../components/Home/Menu"
 import Products from "../components/Home/Products"
 import Contact from "../components/Home/Contact"
@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => (
         styleClass="default-background"
         children="Serving only the Best Coffee in Wellington"
       />
-      <Info />
+      <Story />
       <Menu items={data.menu} />
       <Products />
       <Contact />
