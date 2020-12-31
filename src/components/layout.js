@@ -31,7 +31,10 @@ const useStyles = makeStyles({
   linkText: {
     textDecoration: "none",
     color: "#f7f7f7",
-    fontFamily: "Merriweather"
+    fontFamily: "Merriweather",
+    overflow: "hidden",
+    whiteSpace: "nowrap"
+
   },
   navbarDisplayFlex: {
     display: `flex`,
@@ -91,7 +94,7 @@ const Layout = ({ children }) => {
                     </Typography>
                   </ListItem>
                   <ListItem button>
-                    <Typography variant="h6" noWrap="false">
+                    <Typography variant="h6">
                       <AnchorLink
                         to="/#our-story"
                         title="Our Story"

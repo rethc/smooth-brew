@@ -67,7 +67,7 @@ const SideDrawer = () => {
                     </Typography>
                 </ListItem>
                 <ListItem button>
-                    <Typography variant="h6" noWrap="false">
+                    <Typography variant="h6">
                         <AnchorLink
                             to="/#our-story"
                             title="Our Story"
@@ -102,7 +102,6 @@ const SideDrawer = () => {
             <Drawer
                 anchor="right"
                 open={state.right}
-                onOpen={toggleDrawer("right", true)}
                 onClose={toggleDrawer("right", false)}
             >
                 {sideDrawerList("right")}

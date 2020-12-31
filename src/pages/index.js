@@ -17,6 +17,7 @@ const IndexPage = ({ data }) => (
       img={data.img.childImageSharp.fluid}
       title="Smooth Brew"
       styleClass="default-background"
+      children="The Finest Coffee in Wellington"
     />
     <Info />
     <Menu items={data.menu} />

@@ -1,18 +1,28 @@
-import React from "react"
-import BackgroundImage from "gatsby-background-image"
+import React from "react";
+import BackgroundImage from "gatsby-background-image";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
 
-export default function BackgroundSection({
-  img,
-  styleClass,
-  title,
-  children,
-}) {
+const useStyles = makeStyles({
+  title: {
+    color: "#f7f7f7",
+    fontFamily: "Open Sans Condensed",
+    textTransform: "uppercase",
+    fontWeight: "bold"
+  }
+});
+
+
+export default function BackgroundSection({ img, styleClass, title, children, }) {
+  const classes = useStyles();
   return (
     <BackgroundImage className={styleClass} fluid={img}>
-      <h1 className="title text-white text-uppercase text-center display-4 font-weight-bold">
+      <Typography variant="h2" className={classes.title}>
         {title}
-      </h1>
-      {children}
+      </Typography>
+      <Typography variant="h3">
+        {children}
+      </Typography>
     </BackgroundImage>
   );
 }
