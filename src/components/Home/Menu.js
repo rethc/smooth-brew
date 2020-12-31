@@ -43,7 +43,7 @@ export default class Menu extends Component {
     if (this.state.items.length > 0) {
       return (
         <section className="menu py-5">
-          <div className="container" id="menu">
+          <div id="menu" className="container" >
             <Title title="Menu" />
             {/* ===== CATEGORIES ===== */}
             <div className="row mb-4">

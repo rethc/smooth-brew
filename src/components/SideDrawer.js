@@ -20,6 +20,7 @@ const useStyles = makeStyles({
         textDecoration: `none`,
         textTransform: `uppercase`,
         color: `black`,
+        fontFamily: "Merriweather"
 
     },
 });
@@ -101,7 +102,7 @@ const SideDrawer = () => {
                 aria-label="menu"
                 onClick={toggleDrawer("right", true)}
             >
-                <Menu style={{ color: "#f7f7f7" }} />
+                <Menu fontSize="large" style={{ color: "#f7f7f7" }} />
             </IconButton>
             <Drawer
                 anchor="right"

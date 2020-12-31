@@ -17,6 +17,7 @@ import Container from "@material-ui/core/Container";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { makeStyles } from "@material-ui/core/styles";
 import SideDrawer from "./SideDrawer";
+import Hidden from "@material-ui/core/Hidden";
 
 
 import "./layout.css";
@@ -50,57 +51,60 @@ const Layout = ({ children }) => {
             <Link to="/">
               <img src={logo} alt="Smooth Brew Logo" />
             </Link>
-            {/* 
-            <List
-              component="nav"
-              aria-labelledby="main navigation"
-              className={classes.navDisplayFlex}
-            >
-              <ListItem button>
-                <Typography variant="h6">
-                  <AnchorLink
-                    to="/#menu"
-                    className="nav-link"
-                    title="Menu"
-                    className={classes.linkText}
-                  />
-                </Typography>
-              </ListItem>
-              <ListItem button>
-                <Typography variant="h6">
-                  <AnchorLink
-                    to="/#products"
-                    className="nav-link"
-                    title="Products"
-                    className={classes.linkText}
-                  />
-                </Typography>
-              </ListItem>
-              <ListItem button>
-                <Typography variant="h6" noWrap="false">
-                  <AnchorLink
-                    to="/#our-story"
-                    className="nav-link"
-                    title="Our Story"
-                    className={classes.linkText}
-                  />
-                </Typography>
-              </ListItem>
-              <ListItem button>
-                <Typography variant="h6">
-                  <Link
-                    to="/about"
-                    className="nav-link"
-                    title="About"
-                    className={classes.linkText}
-                  >
-                    About
-            </Link>
-                </Typography>
-              </ListItem>
-            </List>
-            */}
-            <SideDrawer />
+
+            <Hidden smDown>
+              <List
+                component="nav"
+                aria-labelledby="main navigation"
+                className={classes.navDisplayFlex}
+              >
+                <ListItem button>
+                  <Typography variant="h6">
+                    <AnchorLink
+                      to="/#menu"
+                      className="nav-link"
+                      title="Menu"
+                      className={classes.linkText}
+                    />
+                  </Typography>
+                </ListItem>
+                <ListItem button>
+                  <Typography variant="h6">
+                    <AnchorLink
+                      to="/#products"
+                      className="nav-link"
+                      title="Products"
+                      className={classes.linkText}
+                    />
+                  </Typography>
+                </ListItem>
+                <ListItem button>
+                  <Typography variant="h6" noWrap="false">
+                    <AnchorLink
+                      to="/#our-story"
+                      className="nav-link"
+                      title="Our Story"
+                      className={classes.linkText}
+                    />
+                  </Typography>
+                </ListItem>
+                <ListItem button>
+                  <Typography variant="h6">
+                    <Link
+                      to="/about"
+                      className="nav-link"
+                      title="About"
+                      className={classes.linkText}
+                    >
+                      About
+                 </Link>
+                  </Typography>
+                </ListItem>
+              </List>
+            </Hidden>
+            <Hidden mdUp>
+              <SideDrawer />
+            </Hidden>
           </Container>
         </Toolbar>
       </AppBar>
