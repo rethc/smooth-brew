@@ -27,15 +27,18 @@ const getCategories = items => {
 const useStyles = theme => ({
   button: {
     background: "#D38D5F",
-    justifyContent: 'center'
+    justifyContent: "center",
+    marginBottom: "0.5em"
   },
   root: {
     flexGrow: 1,
+    justifyContent: "center",
   },
   paper: {
     padding: theme.spacing(2),
-    margin: 'auto',
-    maxWidth: 500,
+    margin: '0.2em',
+    maxWidth: 480,
+
   },
   image: {
     width: 128,
@@ -101,38 +104,36 @@ class Menu extends Component {
                 </ButtonGroup>
               </Container>
               {/* ===== ITEMS ===== */}
-              <div className={classes.root}>
-                <Paper className={classes.paper}>
-                  <Grid container spacing={1}>
-                    <Grid item>
-                      {this.state.coffeeItems.map(({ node }) => {
-                        return (
-                          <>
-                            <ButtonBase className={classes.image} key={node.id}>
-                              <Img fixed={node.image.fixed} />
-                            </ButtonBase>
-                            <Grid item xs={12} sm container>
-                              <Grid item xs container direction="column" spacing={2}>
-                                <Grid item xs>
-                                  <Typography gutterBottom variant="subtitle1">
-                                    {node.title}
-                                  </Typography>
-                                  <Typography variant="body2" gutterBottom>
-                                    {node.description.description}
-                                  </Typography>
-                                </Grid>
-                                <Grid item>
-                                  <Typography variant="subtitle1">{node.price}</Typography>
-                                </Grid>
+              <Grid container className={classes.root}>
+                {this.state.coffeeItems.map(({ node }) => {
+                  return (
+                    <Paper className={classes.paper} >
+                      <Grid container spacing={5}>
+                        <Grid item container>
+                          <ButtonBase className={classes.image} key={node.id}>
+                            <Img fixed={node.image.fixed} />
+                          </ButtonBase>
+                          <Grid item xs={12} sm container>
+                            <Grid item xs container direction="column" spacing={2}>
+                              <Grid item xs>
+                                <Typography gutterBottom variant="subtitle1">
+                                  {node.title}
+                                </Typography>
+                                <Typography variant="body2" gutterBottom>
+                                  {node.description.description}
+                                </Typography>
+                              </Grid>
+                              <Grid item>
+                                <Typography variant="subtitle1">{node.price}</Typography>
                               </Grid>
                             </Grid>
-                          </>
-                        );
-                      })}
-                    </Grid>
-                  </Grid>
-                </Paper>
-              </div>
+                          </Grid>
+                        </Grid>
+                      </Grid>
+                    </Paper>
+                  );
+                })}
+              </Grid>
             </Container>
           </div>
         </section >
