@@ -31,7 +31,7 @@ const useStyles = makeStyles({
   linkText: {
     textDecoration: "none",
     color: "#f7f7f7",
-    fontFamily: "Merriweather",
+    fontFamily: "Open Sans Condensed",
     overflow: "hidden",
     whiteSpace: "nowrap"
 

@@ -9,6 +9,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
+import { color } from '@material-ui/system';
 
 
 const useStyles = makeStyles({
@@ -16,12 +17,12 @@ const useStyles = makeStyles({
         width: 250,
     },
     linkText: {
-        textDecoration: `none`,
-        textTransform: `uppercase`,
-        color: `black`,
-        fontFamily: "Merriweather"
+        textDecoration: "none",
+        textTransform: "uppercase",
+        color: "#333333",
+        fontFamily: "Open Sans Condensed"
 
-    },
+    }
 });
 
 
