@@ -81,6 +81,7 @@ body {
 .menu,
 .contact {
   background: var(--mainGrey);
+  padding-bottom: 3em;
 }
 
 .product-cards {

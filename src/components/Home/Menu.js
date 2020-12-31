@@ -50,6 +50,10 @@ const useStyles = theme => ({
     maxWidth: '100%',
     maxHeight: '100%',
   },
+  itemText:
+  {
+    fontFamily: "Merriweather",
+  }
 });
 
 
@@ -116,7 +120,7 @@ class Menu extends Component {
                           <Grid item xs={12} sm container>
                             <Grid item xs container direction="column" spacing={2}>
                               <Grid item xs>
-                                <Typography gutterBottom variant="subtitle1">
+                                <Typography gutterBottom variant="h6" className={classes.itemText}>
                                   {node.title}
                                 </Typography>
                                 <Typography variant="body2" gutterBottom>
@@ -124,7 +128,7 @@ class Menu extends Component {
                                 </Typography>
                               </Grid>
                               <Grid item>
-                                <Typography variant="subtitle1">{node.price}</Typography>
+                                <Typography variant="subtitle1">$ {node.price}</Typography>
                               </Grid>
                             </Grid>
                           </Grid>
@@ -141,16 +145,10 @@ class Menu extends Component {
     } else {
       return (
         <div id="menu">
-          <section className="menu py-5">
+          <section className="menu">
             <div className="container">
               <Title title="Menu" />
-              <div className="row">
-                <div className="col-10 col-sm-6 mx-auto text-center">
-                  <p className="lead text-muted mb-5">
-                    There are no items to display.
-                  </p>
-                </div>
-              </div>
+              <p style={{ textAlign: "center" }}>There are no items to display. Please check later</p>
             </div>
           </section>
         </div>
