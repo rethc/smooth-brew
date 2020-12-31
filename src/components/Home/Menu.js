@@ -1,6 +1,14 @@
 import React, { Component } from "react"
 import Title from "../Globals/Title"
 import Img from "gatsby-image"
+import Button from "@material-ui/core/Button";
+import ButtonGroup from "@material-ui/core/ButtonGroup";
+import Container from "@material-ui/core/Container";
+import { withStyles } from "@material-ui/core/styles";
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import ButtonBase from '@material-ui/core/ButtonBase';
 
 const getCategories = items => {
   let tempItems = items.map(items => {
@@ -15,7 +23,35 @@ const getCategories = items => {
   return categories
 }
 
-export default class Menu extends Component {
+
+const useStyles = theme => ({
+  button: {
+    background: "#D38D5F",
+    justifyContent: 'center'
+  },
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    margin: 'auto',
+    maxWidth: 500,
+  },
+  image: {
+    width: 128,
+    height: 128,
+  },
+  img: {
+    margin: 'auto',
+    display: 'block',
+    maxWidth: '100%',
+    maxHeight: '100%',
+  },
+});
+
+
+
+class Menu extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -40,63 +76,66 @@ export default class Menu extends Component {
   }
 
   render() {
+    const { classes } = this.props;
     if (this.state.items.length > 0) {
       return (
-        <section className="menu py-5">
-          <div id="menu" className="container" >
-            <Title title="Menu" />
-            {/* ===== CATEGORIES ===== */}
-            <div className="row mb-4">
-              <div className="col-10 mx-auto text-center">
-                {this.state.categories.map((category, index) => {
-                  return (
-                    <button
-                      type="button"
-                      key={index}
-                      className="btn btn-yellow-menu text-capitalize m-3"
-                      onClick={() => {
-                        this.handleItems(category)
-                      }}
-                    >
-                      {category}
-                    </button>
-                  );
-                })}
+        <section className="menu">
+          <div id="menu">
+            <Container maxWidth="lg">
+              <Title title="Menu" />
+              {/* ===== CATEGORIES ===== */}
+              <Container maxWidth="sm">
+                <ButtonGroup className={classes.button} fullWidth={true}>
+                  {this.state.categories.map((category, index) => {
+                    return (
+                      <Button
+                        key={index}
+                        onClick={() => {
+                          this.handleItems(category)
+                        }}
+                      >
+                        {category}
+                      </Button>
+                    );
+                  })}
+                </ButtonGroup>
+              </Container>
+              {/* ===== ITEMS ===== */}
+              <div className={classes.root}>
+                <Paper className={classes.paper}>
+                  <Grid container spacing={1}>
+                    <Grid item>
+                      {this.state.coffeeItems.map(({ node }) => {
+                        return (
+                          <>
+                            <ButtonBase className={classes.image} key={node.id}>
+                              <Img fixed={node.image.fixed} />
+                            </ButtonBase>
+                            <Grid item xs={12} sm container>
+                              <Grid item xs container direction="column" spacing={2}>
+                                <Grid item xs>
+                                  <Typography gutterBottom variant="subtitle1">
+                                    {node.title}
+                                  </Typography>
+                                  <Typography variant="body2" gutterBottom>
+                                    {node.description.description}
+                                  </Typography>
+                                </Grid>
+                                <Grid item>
+                                  <Typography variant="subtitle1">{node.price}</Typography>
+                                </Grid>
+                              </Grid>
+                            </Grid>
+                          </>
+                        );
+                      })}
+                    </Grid>
+                  </Grid>
+                </Paper>
               </div>
-            </div>
-            {/* ===== ITEMS ===== */}
-            <div className="row">
-              {this.state.coffeeItems.map(({ node }) => {
-                return (
-                  <div
-                    key={node.id}
-                    className="col-11 col-md-6 my-3 d-flex mx-auto"
-                  >
-                    <div>
-                      <Img fixed={node.image.fixed} />
-                    </div>
-                    {/* ===== ITEM TEXT ===== */}
-                    <div className="flex-grow-1 px-3">
-                      <div className="d-flex justify-content-between">
-                        <h6 className="mb-0">
-                          <small>
-                            <b>{node.title}</b>
-                          </small>
-                        </h6>
-                        <h6 className="mb-0 text-price">
-                          <small>${node.price}</small>
-                        </h6>
-                      </div>
-                      <p className="text-muted">
-                        <small>{node.description.description}</small>
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+            </Container>
           </div>
-        </section>
+        </section >
       );
     } else {
       return (
@@ -118,3 +157,5 @@ export default class Menu extends Component {
     }
   }
 }
+
+export default withStyles(useStyles)(Menu);
