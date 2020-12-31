@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from '@material-ui/core/Grid';
-
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const useStyles = makeStyles({
   title: {
@@ -23,7 +23,12 @@ const useStyles = makeStyles({
   },
   button: {
     background: "#D38D5F",
-    color: "#352627"
+  },
+
+  buttonText: {
+    color: "#352627",
+    textDecoration: "none",
+
   }
 });
 
@@ -43,7 +48,11 @@ export default function BackgroundSection({ img, styleClass, title, children, })
         <Typography variant="subtitle1" className={classes.subtitle}>
           {children}
         </Typography>
-        <Button variant="contained" className={classes.button}>Read More</Button>
+        <Button variant="contained" className={classes.button}>
+          <AnchorLink
+            className={classes.buttonText}
+            to="/#our-story"
+            title="Read More" /></Button>
       </Grid>
     </BackgroundImage>
   );

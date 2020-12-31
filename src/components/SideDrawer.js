@@ -9,7 +9,6 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
-import { color } from '@material-ui/system';
 
 
 const useStyles = makeStyles({
