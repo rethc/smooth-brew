@@ -12,15 +12,15 @@ import ButtonBase from '@material-ui/core/ButtonBase';
 
 const getCategories = items => {
   let tempItems = items.map(items => {
-    return items.node.category
-  })
+    return items.node.category;
+  });
   //The Set object lets you store unique values of any type, whether primitive values or object references.
-  let tempCategories = new Set(tempItems)
+  let tempCategories = new Set(tempItems);
   //The Array.from() static method creates a new, shallow-copied Array instance from an array-like or iterable object.
-  let categories = Array.from(tempCategories)
-  categories = ["all", ...categories]
-
-  return categories
+  let categories = Array.from(tempCategories);
+  categories = ["all", ...categories];
+  console.log(categories);
+  return categories;
 }
 
 const useStyles = theme => ({
@@ -52,6 +52,11 @@ const useStyles = theme => ({
   itemText:
   {
     fontFamily: "Merriweather",
+  },
+  itemPrice:
+  {
+    textAlign: "right",
+    color: "#e25b0d"
   }
 });
 
@@ -61,23 +66,23 @@ class Menu extends Component {
     this.state = {
       items: props.items.edges,
       coffeeItems: props.items.edges,
-      categories: getCategories(props.items.edges),
-    }
+      categories: getCategories(props.items.edges)
+    };
   }
 
   handleItems = category => {
-    let tempItems = [...this.state.items]
+    let tempItems = [...this.state.items];
     if (category === "all") {
       this.setState(() => {
-        return { coffeeItems: tempItems }
-      })
+        return { coffeeItems: tempItems };
+      });
     } else {
-      let items = tempItems.filter(({ node }) => node.category === category)
+      let items = tempItems.filter(({ node }) => node.category === category);
       this.setState(() => {
-        return { coffeeItems: items }
-      })
+        return { coffeeItems: items };
+      });
     }
-  }
+  };
 
   render() {
     const { classes } = this.props;
@@ -89,9 +94,10 @@ class Menu extends Component {
               <Title title="Menu" />
               {/* ===== CATEGORIES ===== */}
               <Container maxWidth="sm">
-                <ButtonGroup className={classes.button} fullWidth={true}>
+                <ButtonGroup className={classes.button} fullWidth={true} >
                   {this.state.categories.map((category, index) => {
                     return (
+
                       <Button
                         key={index}
                         onClick={() => {
@@ -100,6 +106,7 @@ class Menu extends Component {
                       >
                         {category}
                       </Button>
+
                     );
                   })}
                 </ButtonGroup>
@@ -120,13 +127,13 @@ class Menu extends Component {
                                 <Typography gutterBottom variant="h6" className={classes.itemText}>
                                   {node.title}
                                 </Typography>
-                                <Typography variant="body2" gutterBottom>
+                                <Typography variant="body1" gutterBottom>
                                   {node.description.description}
                                 </Typography>
                               </Grid>
-                              <Grid item>
-                                <Typography variant="subtitle1">$ {node.price}</Typography>
-                              </Grid>
+
+                              <Typography variant="body1" className={classes.itemPrice}>$ {node.price}</Typography>
+
                             </Grid>
                           </Grid>
                         </Grid>

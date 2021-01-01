@@ -1,27 +1,24 @@
-import React from "react"
+/*import React from "react"
 import Img from "gatsby-image"
+import { makeStyles } from "@material-ui/core/styles";
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 
+const useStyles = makeStyles({
+    productTitle: {
+        fontFamily: "Merriweather",
+        textAlign: "center",
+        marginTop: "0.5em",
+    }
+});
 
-export default function Product({ product }) {
-    return (
-        <div className="col-10 col-sm-8 col-md-6 col-lg-4 mx-auto my-3">
-            <div className="card product-cards">
-                <Img fluid={product.image.fluid} className="card-img-top product-image" alt="Card image cap" />
-                <div className="card-body text-center">
-                    <h6>{product.title}</h6>
-                    <h6>${product.price}</h6>
-                    <button
-                        className="btn btn-yellow mt-3 snipcart-add-item"
-                        data-item-id={product.id}
-                        data-item-name={product.title}
-                        data-item-price={product.price}
-                        data-item-image={product.image.fluid.src}
-                        data-item-url="https://smooth-brew.netlify.app/"
-                    >
-                        Add to Cart
-                    </button>
-                </div>
-            </div>
-        </div >
-    );
+const Product = ({ product }) => {
+    const classes = useStyles();
+    return ( );
 }
+
+export default Product;
+*/

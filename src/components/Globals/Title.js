@@ -12,7 +12,6 @@ const useStyles = makeStyles({
   }
 });
 
-
 const Title = ({ title }) => {
   const classes = useStyles();
   return (
