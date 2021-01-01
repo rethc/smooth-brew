@@ -1,5 +1,5 @@
-import React from "react"
-import Typography from "@material-ui/core/Typography"
+import React from "react";
+import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
@@ -9,7 +9,7 @@ const useStyles = makeStyles({
     textAlign: "center",
     color: "#352627",
     marginBottom: "0.5em",
-  }
+  },
 });
 
 const Title = ({ title }) => {
@@ -19,6 +19,6 @@ const Title = ({ title }) => {
       {title}
     </Typography>
   );
-}
+};
 
 export default Title;

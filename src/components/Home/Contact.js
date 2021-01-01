@@ -5,18 +5,15 @@ import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
 
-
-
 const useStyles = makeStyles({
     button: {
         background: "#D38D5F",
         marginTop: "1em",
-        '&:hover': {
+        "&:hover": {
             background: "#9c6846",
-        }
-    }
+        },
+    },
 });
-
 
 const Contact = () => {
     const classes = useStyles();
@@ -24,8 +21,10 @@ const Contact = () => {
         <section className="contact">
             <Container maxWidth="md">
                 <Title title="Contact us" />
-                <form action="https://getform.io/f/97be0e46-4f1b-4f24-ba27-4b3789ba4824" method="POST">
-
+                <form
+                    action="https://getform.io/f/97be0e46-4f1b-4f24-ba27-4b3789ba4824"
+                    method="POST"
+                >
                     <TextField
                         className={classes.textField}
                         type="text"
@@ -61,12 +60,18 @@ const Contact = () => {
                     />
 
                     {/* SUBMIT */}
-                    <Button className={classes.button} variant="contained" type="submit" fullWidth>Submit</Button>
-
+                    <Button
+                        className={classes.button}
+                        variant="contained"
+                        type="submit"
+                        fullWidth
+                    >
+                        Submit
+          </Button>
                 </form>
             </Container>
         </section>
     );
-}
+};
 
 export default Contact;

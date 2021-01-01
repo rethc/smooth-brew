@@ -1,17 +1,17 @@
-import React, { Component } from "react"
-import Title from "../Globals/Title"
-import Img from "gatsby-image"
+import React, { Component } from "react";
+import Title from "../Globals/Title";
+import Img from "gatsby-image";
 import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Container from "@material-ui/core/Container";
 import { withStyles } from "@material-ui/core/styles";
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import ButtonBase from '@material-ui/core/ButtonBase';
+import Grid from "@material-ui/core/Grid";
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
+import ButtonBase from "@material-ui/core/ButtonBase";
 
-const getCategories = items => {
-  let tempItems = items.map(items => {
+const getCategories = (items) => {
+  let tempItems = items.map((items) => {
     return items.node.category;
   });
   //The Set object lets you store unique values of any type, whether primitive values or object references.
@@ -21,13 +21,13 @@ const getCategories = items => {
   categories = ["all", ...categories];
   console.log(categories);
   return categories;
-}
+};
 
-const useStyles = theme => ({
+const useStyles = (theme) => ({
   button: {
     background: "#D38D5F",
     justifyContent: "center",
-    marginBottom: "0.5em"
+    marginBottom: "0.5em",
   },
   root: {
     flexGrow: 1,
@@ -35,7 +35,7 @@ const useStyles = theme => ({
   },
   paper: {
     padding: theme.spacing(2),
-    margin: '0.2em',
+    margin: "0.2em",
     maxWidth: 480,
     background: "#f7f7f7",
   },
@@ -44,33 +44,31 @@ const useStyles = theme => ({
     height: 128,
   },
   img: {
-    margin: 'auto',
-    display: 'block',
-    maxWidth: '100%',
-    maxHeight: '100%',
+    margin: "auto",
+    display: "block",
+    maxWidth: "100%",
+    maxHeight: "100%",
   },
-  itemText:
-  {
+  itemText: {
     fontFamily: "Merriweather",
   },
-  itemPrice:
-  {
+  itemPrice: {
     textAlign: "right",
-    color: "#e25b0d"
-  }
+    color: "#e25b0d",
+  },
 });
 
 class Menu extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       items: props.items.edges,
       coffeeItems: props.items.edges,
-      categories: getCategories(props.items.edges)
+      categories: getCategories(props.items.edges),
     };
   }
 
-  handleItems = category => {
+  handleItems = (category) => {
     let tempItems = [...this.state.items];
     if (category === "all") {
       this.setState(() => {
@@ -94,13 +92,13 @@ class Menu extends Component {
               <Title title="Menu" />
               {/* ===== CATEGORIES ===== */}
               <Container maxWidth="sm">
-                <ButtonGroup className={classes.button} fullWidth={true} >
+                <ButtonGroup className={classes.button} fullWidth={true}>
                   {this.state.categories.map((category, index) => {
                     return (
                       <Button
                         key={index}
                         onClick={() => {
-                          this.handleItems(category)
+                          this.handleItems(category);
                         }}
                       >
                         {category}
@@ -113,16 +111,26 @@ class Menu extends Component {
               <Grid container className={classes.root}>
                 {this.state.coffeeItems.map(({ node }) => {
                   return (
-                    <Paper className={classes.paper} >
+                    <Paper className={classes.paper}>
                       <Grid container spacing={5}>
                         <Grid item container>
                           <ButtonBase className={classes.image} key={node.id}>
                             <Img fixed={node.image.fixed} />
                           </ButtonBase>
                           <Grid item xs={12} sm container>
-                            <Grid item xs container direction="column" spacing={2}>
+                            <Grid
+                              item
+                              xs
+                              container
+                              direction="column"
+                              spacing={2}
+                            >
                               <Grid item xs>
-                                <Typography gutterBottom variant="h6" className={classes.itemText}>
+                                <Typography
+                                  gutterBottom
+                                  variant="h6"
+                                  className={classes.itemText}
+                                >
                                   {node.title}
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
@@ -130,8 +138,12 @@ class Menu extends Component {
                                 </Typography>
                               </Grid>
 
-                              <Typography variant="body1" className={classes.itemPrice}>$ {node.price}</Typography>
-
+                              <Typography
+                                variant="body1"
+                                className={classes.itemPrice}
+                              >
+                                $ {node.price}
+                              </Typography>
                             </Grid>
                           </Grid>
                         </Grid>
@@ -150,7 +162,9 @@ class Menu extends Component {
           <section className="menu">
             <div className="container">
               <Title title="Menu" />
-              <p style={{ textAlign: "center" }}>There are no items to display. Please check later</p>
+              <p style={{ textAlign: "center" }}>
+                There are no items to display. Please check later
+              </p>
             </div>
           </section>
         </div>

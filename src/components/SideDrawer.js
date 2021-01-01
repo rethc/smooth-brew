@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 import IconButton from "@material-ui/core/IconButton";
 import Menu from "@material-ui/icons/Menu";
-import { useState } from "react"
+import { useState } from "react";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import { Link } from "gatsby";
@@ -11,7 +11,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
-
 const useStyles = makeStyles({
     list: {
         width: 250,
@@ -20,24 +19,22 @@ const useStyles = makeStyles({
         textDecoration: "none",
         textTransform: "uppercase",
         color: "#333333",
-        fontFamily: "Open Sans Condensed"
-
-    }
+        fontFamily: "Open Sans Condensed",
+    },
 });
 
-
 const SideDrawer = () => {
-
     const classes = useStyles();
-
-    const [state, setState] = useState({ right: false })
-
+    const [state, setState] = useState({ right: false });
     const toggleDrawer = (anchor, open) => (event) => {
-        if (event.type === "keydown" && (event.key === "Tab" || event.key === "Shift")) {
-            return
+        if (
+            event.type === "keydown" &&
+            (event.key === "Tab" || event.key === "Shift")
+        ) {
+            return;
         }
-        setState({ [anchor]: open })
-    }
+        setState({ [anchor]: open });
+    };
 
     const sideDrawerList = (anchor) => (
         <div
@@ -46,16 +43,10 @@ const SideDrawer = () => {
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
         >
-            <List
-                component="nav"
-            >
+            <List component="nav">
                 <ListItem button>
                     <Typography variant="h6">
-                        <AnchorLink
-                            to="/#menu"
-                            title="Menu"
-                            className={classes.linkText}
-                        />
+                        <AnchorLink to="/#menu" title="Menu" className={classes.linkText} />
                     </Typography>
                 </ListItem>
                 <ListItem button>
@@ -78,19 +69,16 @@ const SideDrawer = () => {
                 </ListItem>
                 <ListItem button>
                     <Typography variant="h6">
-                        <Link
-                            to="/about"
-                            title="About"
-                            className={classes.linkText}
-                        >
+                        <Link to="/about" title="About" className={classes.linkText}>
                             About
-                     </Link>
+            </Link>
                     </Typography>
                 </ListItem>
                 <ListItem button>
                     <ShoppingCartIcon className="snipcart-checkout" />
-                    <Typography variant="h6" className={classes.linkText}>Cart
-                    </Typography>
+                    <Typography variant="h6" className={classes.linkText}>
+                        Cart
+          </Typography>
                 </ListItem>
             </List>
         </div>
@@ -112,8 +100,7 @@ const SideDrawer = () => {
             >
                 {sideDrawerList("right")}
             </Drawer>
-
         </>
     );
-}
-export default SideDrawer
+};
+export default SideDrawer;

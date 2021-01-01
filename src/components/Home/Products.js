@@ -1,19 +1,16 @@
 import React from "react";
-//import Product from "./Product";
 import Title from "../Globals/Title";
 import { StaticQuery, graphql } from "gatsby";
-import Grid from '@material-ui/core/Grid';
+import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import CardActionArea from '@material-ui/core/CardActionArea';
-
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import Img from "gatsby-image"
-import Card from '@material-ui/core/Card';
+import CardContent from "@material-ui/core/CardContent";
+import CardActions from "@material-ui/core/CardActions";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
+import Img from "gatsby-image";
+import Card from "@material-ui/core/Card";
 import { makeStyles } from "@material-ui/core/styles";
-
 
 const getProducts = graphql`
   {
@@ -39,7 +36,6 @@ const getProducts = graphql`
 `;
 
 const useStyles = makeStyles({
-
   root: {
     flexGrow: 1,
   },
@@ -52,21 +48,19 @@ const useStyles = makeStyles({
   button: {
     background: "#D38D5F",
     marginBottom: "0.5em",
-    '&:hover': {
+    "&:hover": {
       background: "#9c6846",
-    }
+    },
   },
   productButtons: {
     justifyContent: "center",
   },
-  productPrice:
-  {
+  productPrice: {
     marginTop: "0.5em",
     marginBottom: "-1em",
     textAlign: "center",
-    color: "#e25b0d"
-  }
-
+    color: "#e25b0d",
+  },
 });
 
 const Products = () => {
@@ -74,7 +68,7 @@ const Products = () => {
   return (
     <StaticQuery
       query={getProducts}
-      render={data => {
+      render={(data) => {
         return (
           <section className="products">
             <div id="products">
@@ -83,25 +77,44 @@ const Products = () => {
                 <Grid container spacing={2} className={classes.root}>
                   {data.products.edges.map(({ node: product }) => {
                     return (
-                      <Grid item xs={6} className={classes.root} key={product.id}>
-                        <Card variant="outlined" >
-
-                          <CardContent >
+                      <Grid
+                        item
+                        xs={6}
+                        className={classes.root}
+                        key={product.id}
+                      >
+                        <Card variant="outlined">
+                          <CardContent>
                             <CardActionArea>
-                              <Img fluid={product.image.fluid} className="card-img-top product-image" alt="Product Image" key={product.id} />
+                              <Img
+                                fluid={product.image.fluid}
+                                className="card-img-top product-image"
+                                alt="Product Image"
+                                key={product.id}
+                              />
                             </CardActionArea>
-                            <Typography variant="h6" className={classes.productTitle} gutterBottom>
+                            <Typography
+                              variant="h6"
+                              className={classes.productTitle}
+                              gutterBottom
+                            >
                               {product.title}
                             </Typography>
                             <Typography variant="body1" gutterBottom>
                               {product.description.description}
                             </Typography>
-                            <Typography variant="body1" className={classes.productPrice}>$ {product.price}</Typography>
+                            <Typography
+                              variant="body1"
+                              className={classes.productPrice}
+                            >
+                              $ {product.price}
+                            </Typography>
                           </CardContent>
                           <CardActions className={classes.productButtons}>
                             <Button
                               className={`${classes.button} snipcart-add-item`}
-                              variant="contained" color="primary"
+                              variant="contained"
+                              color="primary"
                               data-item-id={product.id}
                               data-item-name={product.title}
                               data-item-price={product.price}
@@ -109,10 +122,9 @@ const Products = () => {
                               data-item-url="https://smooth-brew.netlify.app/"
                             >
                               Add to Cart
-                         </Button>
-
+                            </Button>
                           </CardActions>
-                        </Card >
+                        </Card>
                       </Grid>
                     );
                   })}
@@ -120,10 +132,10 @@ const Products = () => {
               </Container>
             </div>
           </section>
-        )
+        );
       }}
     />
   );
-}
+};
 
 export default Products;

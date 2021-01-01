@@ -3,7 +3,7 @@ import BackgroundImage from "gatsby-background-image";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
-import Grid from '@material-ui/core/Grid';
+import Grid from "@material-ui/core/Grid";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const useStyles = makeStyles({
@@ -12,14 +12,13 @@ const useStyles = makeStyles({
     textTransform: "uppercase",
     fontWeight: "bold",
     fontFamily: "Open Sans Condensed",
-    textShadow: "2px 4px 3px rgba(0,0,0,0.3)"
-
+    textShadow: "2px 4px 3px rgba(0,0,0,0.3)",
   },
   subtitle: {
     color: "#f7f7f7",
     fontFamily: "Roboto",
     textShadow: "2px 4px 3px rgba(0,0,0,0.3)",
-    marginBottom: "2em"
+    marginBottom: "2em",
   },
   button: {
     background: "#D38D5F",
@@ -28,20 +27,19 @@ const useStyles = makeStyles({
   buttonText: {
     color: "#352627",
     textDecoration: "none",
-
-  }
+  },
 });
 
-export default function BackgroundSection({ img, styleClass, title, children, }) {
+export default function BackgroundSection({
+  img,
+  styleClass,
+  title,
+  children,
+}) {
   const classes = useStyles();
   return (
     <BackgroundImage className={styleClass} fluid={img}>
-      <Grid
-        container
-        direction="column"
-        justify="center"
-        alignItems="center"
-      >
+      <Grid container direction="column" justify="center" alignItems="center">
         <Typography variant="h2" className={classes.title}>
           {title}
         </Typography>
@@ -52,7 +50,9 @@ export default function BackgroundSection({ img, styleClass, title, children, })
           <AnchorLink
             className={classes.buttonText}
             to="/#our-story"
-            title="Read More" /></Button>
+            title="Read More"
+          />
+        </Button>
       </Grid>
     </BackgroundImage>
   );
@@ -60,4 +60,4 @@ export default function BackgroundSection({ img, styleClass, title, children, })
 BackgroundSection.defaultProps = {
   title: "default title",
   styleClass: "default-background",
-}
+};

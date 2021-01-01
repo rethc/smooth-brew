@@ -27,12 +27,6 @@ body {
   color: var(--secondaryYellow);
 }
 
-.cart-icon {
-  cursor: pointer;
-  color: var(--mainYellow);
-  font-size: 2rem;
-}
-
 .default-background,
 .about-background {
   background: linear-gradient(

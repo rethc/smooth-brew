@@ -1,16 +1,18 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import BackgroundSection from "../components/Globals/BackgroundSection"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import BackgroundSection from "../components/Globals/BackgroundSection";
 
 const AboutPage = ({ data }) => (
   <div className="application">
     <Helmet>
       <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans+Condensed:wght@700&family=Roboto:wght@300;400;500;700&family=Cabin&display=swap" rel="stylesheet" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans+Condensed:wght@700&family=Roboto:wght@300;400;500;700&family=Cabin&display=swap"
+        rel="stylesheet"
+      />
     </Helmet>
     <Layout>
       <SEO title="About us" />
@@ -22,7 +24,7 @@ const AboutPage = ({ data }) => (
       />
     </Layout>
   </div>
-)
+);
 
 export const query = graphql`
   {
@@ -34,6 +36,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default AboutPage
+export default AboutPage;

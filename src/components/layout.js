@@ -23,23 +23,22 @@ import "./layout.css";
 
 const useStyles = makeStyles({
   appBar: {
-    background: "#352627"
+    background: "#352627",
   },
   navDisplayFlex: {
     display: "flex",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
   },
   linkText: {
     textDecoration: "none",
     color: "#f7f7f7",
     fontFamily: "Open Sans Condensed",
     overflow: "hidden",
-    whiteSpace: "nowrap"
-
+    whiteSpace: "nowrap",
   },
   navbarDisplayFlex: {
     display: `flex`,
-    justifyContent: `space-between`
+    justifyContent: `space-between`,
   },
   footer: {
     backgroundColor: "#352627",
@@ -54,8 +53,8 @@ const useStyles = makeStyles({
   copyright: {
     color: "#D38D5F",
     marginTop: "0.25em",
-    textAlign: "center"
-  }
+    textAlign: "center",
+  },
 });
 
 const Layout = ({ children }) => {
@@ -111,7 +110,7 @@ const Layout = ({ children }) => {
                         className={classes.linkText}
                       >
                         About
-                 </Link>
+                      </Link>
                     </Typography>
                   </ListItem>
                   <ListItem button>
@@ -130,12 +129,7 @@ const Layout = ({ children }) => {
       <footer className={classes.footer}>
         <Container>
           <Grid item container spacing={2} justify="center">
-            <Grid
-              item
-              component={"a"}
-              target="_blank"
-              href="https://reth.nz"
-            >
+            <Grid item component={"a"} target="_blank" href="https://reth.nz">
               <HomeIcon className={classes.socialButtons} fontSize="large" />
             </Grid>
             <Grid
@@ -152,20 +146,23 @@ const Layout = ({ children }) => {
               target="_blank"
               href="https://www.linkedin.com/in/chesda-reth-8427741b3"
             >
-              <LinkedinIcon className={classes.socialButtons} fontSize="large" />
+              <LinkedinIcon
+                className={classes.socialButtons}
+                fontSize="large"
+              />
             </Grid>
           </Grid>
           <Typography className={classes.copyright}>
-
-            &copy;{new Date().getFullYear().toString()} Chesda Reth. All rights reserved.
-             </Typography>
+            &copy;{new Date().getFullYear().toString()} Chesda Reth. All rights
+            reserved.
+          </Typography>
         </Container>
       </footer>
     </>
   );
 };
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default Layout;
