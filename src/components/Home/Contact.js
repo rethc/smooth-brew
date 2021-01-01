@@ -37,7 +37,7 @@ const Contact = () => {
                         margin="normal"
                     />
 
-                    <TextFieldmessage
+                    <TextField
                         className={classes.textField}
                         type="email"
                         id="email"
