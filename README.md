@@ -31,7 +31,7 @@ Smooth brew is a responsive starter theme for an online coffee shop, powered by 
 ## ⚛️ Built using
 
 - Gatsby v2
-- Bootstrap v4 
+- Material UI
 - Contentful Headless CMS
 - Deployed on Netlify
 - Snipcart eCommerce integration
