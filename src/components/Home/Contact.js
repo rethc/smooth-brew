@@ -52,6 +52,7 @@ const Contact = () => {
                         className={classes.textField}
                         id="message"
                         label="Message"
+                        name="message"
                         multiline
                         rows={7}
                         variant="filled"

@@ -105,7 +105,6 @@ class Menu extends Component {
                       >
                         {category}
                       </Button>
-
                     );
                   })}
                 </ButtonGroup>
