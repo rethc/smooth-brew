@@ -9,6 +9,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
 
 const useStyles = makeStyles({
@@ -84,6 +85,11 @@ const SideDrawer = () => {
                         >
                             About
                      </Link>
+                    </Typography>
+                </ListItem>
+                <ListItem button>
+                    <ShoppingCartIcon />
+                    <Typography variant="h6" className={classes.linkText}>Cart
                     </Typography>
                 </ListItem>
             </List>
