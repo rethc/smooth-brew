@@ -6,7 +6,7 @@
   <a href="https://github.com/rethc/smooth-brew/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="@rethc/smooth-brew is released under the MIT license." />
   </a>
-<img src="https://img.shields.io/badge/Version-1.0-green" alt="@rethc/smooth-brew is on Version 1.0" />
+<img src="https://img.shields.io/badge/Version-2.0-green" alt="@rethc/smooth-brew is on Version 2.0" />
   <a href="https://twitter.com/intent/follow?screen_name=ChesdaReth">
     <img src="https://img.shields.io/twitter/follow/ChesdaReth?label=ChesdaReth&style=social" alt="Follow @ChesdaReth" />
   </a>
@@ -14,7 +14,7 @@
 
 Smooth brew is a responsive starter theme for an online coffee shop, powered by [Gatsby v2](https://www.gatsbyjs.org).
 
-<img height="800" alt="smooth-brew" src="http://iforce.co.nz/i/my2iazzm.43w.png">
+<img height="800" alt="smooth-brew" src="https://i.imgur.com/kz49RtH.png">
 
 ### [Demo website](https://smooth-brew.netlify.app)
 
