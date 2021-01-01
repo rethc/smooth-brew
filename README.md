@@ -6,7 +6,7 @@
   <a href="https://github.com/rethc/smooth-brew/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="@rethc/smooth-brew is released under the MIT license." />
   </a>
-<img src="https://img.shields.io/badge/Version-2.0-green" alt="@rethc/smooth-brew is on Version 2.0" />
+<img src="https://img.shields.io/badge/version-2.0-yellow" alt="@rethc/smooth-brew is on version 2.0" />
   <img src="https://img.shields.io/github/last-commit/rethc/smooth-brew" alt="@rethc/smooth-brew last commit">
   <a href="https://twitter.com/intent/follow?screen_name=ChesdaReth">
     <img src="https://img.shields.io/twitter/follow/ChesdaReth?label=ChesdaReth&style=social" alt="Follow @ChesdaReth" />
