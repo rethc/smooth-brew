@@ -5,6 +5,9 @@ import { StaticQuery, graphql } from "gatsby";
 import Grid from '@material-ui/core/Grid';
 import Container from "@material-ui/core/Container";
 import CardContent from '@material-ui/core/CardContent';
+import CardActions from '@material-ui/core/CardActions';
+import CardActionArea from '@material-ui/core/CardActionArea';
+
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Img from "gatsby-image"
@@ -44,7 +47,26 @@ const useStyles = makeStyles({
     fontFamily: "Merriweather",
     textAlign: "center",
     marginTop: "0.5em",
+  },
+
+  button: {
+    background: "#D38D5F",
+    marginBottom: "0.5em",
+    '&:hover': {
+      background: "#9c6846",
+    }
+  },
+  productButtons: {
+    justifyContent: "center",
+  },
+  productPrice:
+  {
+    marginTop: "0.5em",
+    marginBottom: "-1em",
+    textAlign: "center",
+    color: "#e25b0d"
   }
+
 });
 
 const Products = () => {
@@ -54,42 +76,50 @@ const Products = () => {
       query={getProducts}
       render={data => {
         return (
-          <div id="products">
-            <Title title="Products" />
-            <Container maxWidth="lg">
-              <Grid container spacing={2} className={classes.root}>
-                {data.products.edges.map(({ node: product }) => {
-                  return (
-                    <Grid item xs={6} className={classes.root} key={product.id}>
-                      <Card variant="outlined" >
-                        <CardContent >
-                          <Img fluid={product.image.fluid} className="card-img-top product-image" alt="Product Image" key={product.id} />
-                          <Typography variant="h6" className={classes.productTitle} gutterBottom>
-                            {product.title}
-                          </Typography>
-                          <Typography variant="body1" gutterBottom>
-                            {product.description.description}
-                          </Typography>
+          <section className="products">
+            <div id="products">
+              <Title title="Products" />
+              <Container maxWidth="lg">
+                <Grid container spacing={2} className={classes.root}>
+                  {data.products.edges.map(({ node: product }) => {
+                    return (
+                      <Grid item xs={6} className={classes.root} key={product.id}>
+                        <Card variant="outlined" >
 
-                          <button
-                            className="btn btn-yellow mt-3 snipcart-add-item"
-                            data-item-id={product.id}
-                            data-item-name={product.title}
-                            data-item-price={product.price}
-                            data-item-image={product.image.fluid.src}
-                            data-item-url="https://smooth-brew.netlify.app/"
-                          >
-                            Add to Cart
-                    </button>
-                          <Typography variant="body1">$ {product.price}</Typography>
-                        </CardContent>
-                      </Card >
-                    </Grid>
-                  );
-                })}
-              </Grid>
-            </Container>
-          </div>
+                          <CardContent >
+                            <CardActionArea>
+                              <Img fluid={product.image.fluid} className="card-img-top product-image" alt="Product Image" key={product.id} />
+                            </CardActionArea>
+                            <Typography variant="h6" className={classes.productTitle} gutterBottom>
+                              {product.title}
+                            </Typography>
+                            <Typography variant="body1" gutterBottom>
+                              {product.description.description}
+                            </Typography>
+                            <Typography variant="body1" className={classes.productPrice}>$ {product.price}</Typography>
+                          </CardContent>
+                          <CardActions className={classes.productButtons}>
+                            <Button
+                              className={classes.button}
+                              variant="contained" color="primary"
+                              data-item-id={product.id}
+                              data-item-name={product.title}
+                              data-item-price={product.price}
+                              data-item-image={product.image.fluid.src}
+                              data-item-url="https://smooth-brew.netlify.app/"
+                            >
+                              Add to Cart
+                         </Button>
+
+                          </CardActions>
+                        </Card >
+                      </Grid>
+                    );
+                  })}
+                </Grid>
+              </Container>
+            </div>
+          </section>
         )
       }}
     />

@@ -97,7 +97,6 @@ class Menu extends Component {
                 <ButtonGroup className={classes.button} fullWidth={true} >
                   {this.state.categories.map((category, index) => {
                     return (
-
                       <Button
                         key={index}
                         onClick={() => {
@@ -144,7 +143,7 @@ class Menu extends Component {
               </Grid>
             </Container>
           </div>
-        </section >
+        </section>
       );
     } else {
       return (
