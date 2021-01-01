@@ -23,7 +23,6 @@ const getCategories = items => {
   return categories
 }
 
-
 const useStyles = theme => ({
   button: {
     background: "#D38D5F",
@@ -38,7 +37,7 @@ const useStyles = theme => ({
     padding: theme.spacing(2),
     margin: '0.2em',
     maxWidth: 480,
-
+    background: "#f7f7f7",
   },
   image: {
     width: 128,
@@ -55,8 +54,6 @@ const useStyles = theme => ({
     fontFamily: "Merriweather",
   }
 });
-
-
 
 class Menu extends Component {
   constructor(props) {

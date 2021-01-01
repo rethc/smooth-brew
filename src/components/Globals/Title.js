@@ -8,6 +8,7 @@ const useStyles = makeStyles({
     fontFamily: "Merriweather",
     textAlign: "center",
     color: "#352627",
+    marginBottom: "0.5em",
   }
 });
 

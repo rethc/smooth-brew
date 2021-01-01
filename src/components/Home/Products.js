@@ -1,7 +1,9 @@
-import React from "react"
-import Product from "./Product"
-import Title from "../Globals/Title"
-import { StaticQuery, graphql } from "gatsby"
+import React from "react";
+import Product from "./Product";
+import Title from "../Globals/Title";
+import { StaticQuery, graphql } from "gatsby";
+import Grid from '@material-ui/core/Grid';
+import Container from "@material-ui/core/Container";
 
 const getProducts = graphql`
   {
@@ -23,24 +25,33 @@ const getProducts = graphql`
   }
 `;
 
-export default function Products() {
+const Products = () => {
   return (
     <StaticQuery
       query={getProducts}
       render={data => {
         return (
-          <section className="py-5">
-            <div className="container" id="products">
-              <Title title="Products" />
-              <div className="row">
+          <div id="products">
+            <Title title="Products" />
+            <Container maxWidth="lg">
+              <Grid
+                container
+                spacing={3}
+                direction="row"
+              >
                 {data.products.edges.map(({ node: product }) => {
-                  return <Product key={product.id} product={product} />;
+                  return (
+                    <Grid item xs={6}>
+                      <Product key={product.id} product={product} />
+                    </Grid>);
                 })}
-              </div>
-            </div>
-          </section>
+              </Grid>
+            </Container>
+          </div>
         )
       }}
     />
   );
 }
+
+export default Products;
