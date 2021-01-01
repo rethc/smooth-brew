@@ -8,6 +8,7 @@ module.exports = {
     author: `@rethc`,
   },
   plugins: [
+    `gatsby-plugin-material-ui`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -33,7 +34,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-anchor-links",
       options: {
-        offset: -50
+        offset: 0
       }
     },
     `gatsby-transformer-sharp`,

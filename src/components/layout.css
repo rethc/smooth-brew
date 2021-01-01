@@ -1,26 +1,22 @@
 :root {
-  --mainBrown: #2d1e1f;
-  --mainYellow: rgb(255, 158, 9);
-  --secondaryYellow: rgb(255, 99, 9);
+  --mainBrown: #352627;
+  --mainYellow: #ff9e09;
+  --secondaryYellow: #ff6309;
   --mainGrey: #ece8dc;
   --mainWhite: #f7f7f7;
-  --mainDark: #222;
+  --mainDark: #555555;
+}
+
+p {
+  font-size: x-large;
 }
 
 body {
   background: var(--mainWhite);
   color: var(--mainDark);
-  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Courier New", Courier, monospace !important;
-  letter-spacing: 0.25rem !important;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Cabin", sans-serif;
 }
 
 .text-yellow {
@@ -39,43 +35,37 @@ h6 {
 
 .default-background,
 .about-background {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: linear-gradient(
+    90deg,
+    rgba(212, 105, 60, 0.5) 0%,
+    rgba(24, 24, 24, 0.5) 91%
+  );
   opacity: 1 !important;
-  background: linear-gradient(rgba(255, 158, 9, 0.5), rgba(255, 158, 9, 0.5));
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  display: -webkit-flex; /*Safari*/
+  display: flex;
+  height: 100%;
+  align-items: center;
+  text-align: center;
 }
 
 .about-background {
-  min-height: 60vh;
-}
-
-.btn-yellow,
-.btn-yellow-menu {
-  color: var(--mainYellow);
-  border-color: var(--mainYellow);
-}
-
-.btn-yellow-menu:hover,
-.btn-yellow:hover {
-  background: var(--mainYellow);
-  color: var(--mainBrown);
-}
-
-.btn-yellow-menu {
-  background-color: var(--mainWhite);
-}
-
-.footer {
-  background: var(--mainBrown);
+  min-height: 100vh;
 }
 
 .menu,
 .contact {
   background: var(--mainGrey);
+  padding-bottom: 3em;
+}
+
+.products {
+  padding-bottom: 3em;
 }
 
 .product-cards {
