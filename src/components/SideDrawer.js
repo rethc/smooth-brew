@@ -88,8 +88,8 @@ const SideDrawer = () => {
                     </Typography>
                 </ListItem>
                 <ListItem button>
-                    <ShoppingCartIcon />
-                    <Typography variant="h6" className={classes.linkText & "snipcart-checkout"}>Cart
+                    <ShoppingCartIcon className="snipcart-checkout" />
+                    <Typography variant="h6" className={classes.linkText}>Cart
                     </Typography>
                 </ListItem>
             </List>

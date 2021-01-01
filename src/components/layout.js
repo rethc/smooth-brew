@@ -115,7 +115,7 @@ const Layout = ({ children }) => {
                     </Typography>
                   </ListItem>
                   <ListItem button>
-                    <ShoppingCartIcon />
+                    <ShoppingCartIcon className="snipcart-checkout" />
                   </ListItem>
                 </List>
               </Hidden>

@@ -100,7 +100,7 @@ const Products = () => {
                           </CardContent>
                           <CardActions className={classes.productButtons}>
                             <Button
-                              className={classes.button}
+                              className={`${classes.button} snipcart-add-item`}
                               variant="contained" color="primary"
                               data-item-id={product.id}
                               data-item-name={product.title}
