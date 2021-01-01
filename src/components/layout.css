@@ -55,27 +55,7 @@ body {
 }
 
 .about-background {
-  min-height: 60vh;
-}
-
-.btn-yellow,
-.btn-yellow-menu {
-  color: var(--mainYellow);
-  border-color: var(--mainYellow);
-}
-
-.btn-yellow-menu:hover,
-.btn-yellow:hover {
-  background: var(--mainYellow);
-  color: var(--mainBrown);
-}
-
-.btn-yellow-menu {
-  background-color: var(--mainWhite);
-}
-
-.footer {
-  background: var(--mainBrown);
+  min-height: 100vh;
 }
 
 .menu,

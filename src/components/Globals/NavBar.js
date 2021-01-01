@@ -5,28 +5,11 @@ import { FaCartArrowDown } from "react-icons/fa"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 export default class NavBar extends Component {
-  state = {
-    navbarOpen: false,
-    css: "collapse navbar-collapse"
-  }
-
-  navbarHandler = () => {
-    this.state.navbarOpen
-      ? this.setState({ navbarOpen: false, css: "collapse navbar-collapse" })
-      : this.setState({
-        navbarOpen: true,
-        css: "collapse navbar-collapse show",
-      })
-  }
-
   render() {
     return (
-      <nav className="navbar navbar-expand-sm bg-light navbar-light">
+      <nav>
         <Link to="/" className="navbar-brand">
           <img src={logo} alt="logo" />
-          {/* https://www.iconfinder.com/icons/185113/coffee_streamline_icon
-                    Creative Commons (Attribution 3.0 Unported);
-                    https://www.iconfinder.com/webalys */}
         </Link>
         <button
           className="navbar-toggler"
@@ -36,32 +19,27 @@ export default class NavBar extends Component {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className={this.state.css}>
-          <ul className="navbar-nav mx-auto">
-            <Link to="/" className="nav-link">
-              Home
+          <Link to="/" className="nav-link">
+            Home
             </Link>
-            <AnchorLink
-              to="/#menu"
-              className="nav-link"
-              title="Menu"
-            />
-            <AnchorLink
-              to="/#products"
-              className="nav-link"
-              title="Products"
-            />
-            <AnchorLink
-              to="/#our-story"
-              className="nav-link"
-              title="Our Story"
-            />
-            <Link to="/about" className="nav-link" title="About">
-              About
+          <AnchorLink
+            to="/#menu"
+            className="nav-link"
+            title="Menu"
+          />
+          <AnchorLink
+            to="/#products"
+            className="nav-link"
+            title="Products"
+          />
+          <AnchorLink
+            to="/#our-story"
+            className="nav-link"
+            title="Our Story"
+          />
+          <Link to="/about" className="nav-link" title="About">
+            About
             </Link>
-            <li className="nav-item ml-sm-5">
-              <FaCartArrowDown className="cart-icon snipcart-checkout" />
-            </li>
-          </ul>
         </div>
       </nav>
     );
