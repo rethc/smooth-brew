@@ -89,7 +89,7 @@ const SideDrawer = () => {
                 </ListItem>
                 <ListItem button>
                     <ShoppingCartIcon />
-                    <Typography variant="h6" className={classes.linkText}>Cart
+                    <Typography variant="h6" className={classes.linkText & "snipcart-checkout"}>Cart
                     </Typography>
                 </ListItem>
             </List>
