@@ -34,7 +34,7 @@ const useStyles = (theme) => ({
     justifyContent: "center",
   },
   paper: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(1),
     margin: "0.2em",
     maxWidth: 480,
     background: "#f7f7f7",
@@ -52,9 +52,14 @@ const useStyles = (theme) => ({
   itemText: {
     fontFamily: "Merriweather",
   },
+  itemDescription: {
+    fontSize: "small"
+  },
   itemPrice: {
     textAlign: "right",
     color: "#e25b0d",
+    fontSize: "small",
+    marginBottom: 12
   },
 });
 
@@ -128,12 +133,12 @@ class Menu extends Component {
                               <Grid item xs>
                                 <Typography
                                   gutterBottom
-                                  variant="h6"
+                                  variant="subtitle1"
                                   className={classes.itemText}
                                 >
                                   {node.title}
                                 </Typography>
-                                <Typography variant="body1" gutterBottom>
+                                <Typography className={classes.itemDescription} gutterBottom>
                                   {node.description.description}
                                 </Typography>
                               </Grid>

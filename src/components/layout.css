@@ -7,8 +7,12 @@
   --mainDark: #555555;
 }
 
+.logo {
+  margin-top: 0.2em;
+}
+
 p {
-  font-size: x-large;
+  font-size: large;
 }
 
 body {

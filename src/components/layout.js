@@ -36,6 +36,9 @@ const useStyles = makeStyles({
     overflow: "hidden",
     whiteSpace: "nowrap",
   },
+  toolbar: {
+    minHeight: 20
+  },
   navbarDisplayFlex: {
     display: `flex`,
     justifyContent: `space-between`,
@@ -63,10 +66,10 @@ const Layout = ({ children }) => {
     <>
       <HideOnScroll>
         <AppBar position="fixed" className={classes.appBar}>
-          <Toolbar>
+          <Toolbar className={classes.toolbar}>
             <Container maxWidth="xl" className={classes.navbarDisplayFlex}>
               <Link to="/">
-                <img src={logo} alt="Smooth Brew Logo" />
+                <img className="logo" src={logo} alt="Smooth Brew Logo" />
               </Link>
 
               <Hidden smDown>
@@ -76,7 +79,7 @@ const Layout = ({ children }) => {
                   className={classes.navDisplayFlex}
                 >
                   <ListItem button>
-                    <Typography variant="h6">
+                    <Typography variant="p">
                       <AnchorLink
                         to="/#menu"
                         title="Menu"
@@ -85,7 +88,7 @@ const Layout = ({ children }) => {
                     </Typography>
                   </ListItem>
                   <ListItem button>
-                    <Typography variant="h6">
+                    <Typography variant="p">
                       <AnchorLink
                         to="/#products"
                         title="Products"
@@ -94,7 +97,7 @@ const Layout = ({ children }) => {
                     </Typography>
                   </ListItem>
                   <ListItem button>
-                    <Typography variant="h6">
+                    <Typography variant="p">
                       <AnchorLink
                         to="/#our-story"
                         title="Our Story"
@@ -103,7 +106,7 @@ const Layout = ({ children }) => {
                     </Typography>
                   </ListItem>
                   <ListItem button>
-                    <Typography variant="h6">
+                    <Typography variant="p">
                       <Link
                         to="/about"
                         title="About"

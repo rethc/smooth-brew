@@ -55,11 +55,15 @@ const useStyles = makeStyles({
   productButtons: {
     justifyContent: "center",
   },
+  productDescription: {
+    fontSize: "small"
+  },
   productPrice: {
     marginTop: "0.5em",
-    marginBottom: "-1em",
+    marginBottom: "-1.5em",
     textAlign: "center",
     color: "#e25b0d",
+    fontSize: "small"
   },
 });
 
@@ -94,17 +98,16 @@ const Products = () => {
                               />
                             </CardActionArea>
                             <Typography
-                              variant="h6"
+                              variant="subtitle1"
                               className={classes.productTitle}
                               gutterBottom
                             >
                               {product.title}
                             </Typography>
-                            <Typography variant="body1" gutterBottom>
+                            <Typography gutterBottom className={classes.productDescription}>
                               {product.description.description}
                             </Typography>
                             <Typography
-                              variant="body1"
                               className={classes.productPrice}
                             >
                               $ {product.price}
