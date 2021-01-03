@@ -19,6 +19,7 @@ import HomeIcon from "@material-ui/icons/Home";
 import LinkedinIcon from "@material-ui/icons/LinkedIn";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import StyledBadge from "@material-ui/core/Badge";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 import "./layout.css";
 
@@ -136,27 +137,23 @@ const Layout = ({ children }) => {
       <footer className={classes.footer}>
         <Container>
           <Grid item container spacing={2} justify="center">
-            <Grid item component={"a"} target="_blank" href="https://reth.nz">
-              <HomeIcon className={classes.socialButtons} fontSize="large" />
+            <Grid item>
+              <OutboundLink href="https://reth.nz" target="_blank" alt="Chesda's Portfolio">
+                <HomeIcon className={classes.socialButtons} fontSize="large" />
+              </OutboundLink>
             </Grid>
-            <Grid
-              item
-              component={"a"}
-              target="_blank"
-              href="https://github.com/rethc"
-            >
-              <GitHubIcon className={classes.socialButtons} fontSize="large" />
+            <Grid item >
+              <OutboundLink href="https://github.com/rethc" target="_blank" alt="Github">
+                <GitHubIcon className={classes.socialButtons} fontSize="large" />
+              </OutboundLink>
             </Grid>
-            <Grid
-              item
-              component={"a"}
-              target="_blank"
-              href="https://www.linkedin.com/in/chesda-reth-8427741b3"
-            >
-              <LinkedinIcon
-                className={classes.socialButtons}
-                fontSize="large"
-              />
+            <Grid item>
+              <OutboundLink href="https://www.linkedin.com/in/chesda-reth-8427741b3" target="_blank" alt="LinkedIn">
+                <LinkedinIcon
+                  className={classes.socialButtons}
+                  fontSize="large"
+                />
+              </OutboundLink>
             </Grid>
           </Grid>
           <Typography className={classes.copyright}>
