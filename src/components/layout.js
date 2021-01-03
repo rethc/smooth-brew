@@ -18,6 +18,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import HomeIcon from "@material-ui/icons/Home";
 import LinkedinIcon from "@material-ui/icons/LinkedIn";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import StyledBadge from "@material-ui/core/Badge";
 
 import "./layout.css";
 
@@ -118,7 +119,9 @@ const Layout = ({ children }) => {
                     </Typography>
                   </ListItem>
                   <ListItem button>
-                    <ShoppingCartIcon className="snipcart-checkout" />
+                    <StyledBadge badgeContent={<span className="snipcart-items-count"></span>}>
+                      <ShoppingCartIcon className="snipcart-checkout" />
+                    </StyledBadge>
                   </ListItem>
                 </List>
               </Hidden>

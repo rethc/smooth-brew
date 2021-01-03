@@ -69,6 +69,7 @@ const useStyles = makeStyles({
 
 const Products = () => {
   const classes = useStyles();
+
   return (
     <StaticQuery
       query={getProducts}
