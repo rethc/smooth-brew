@@ -6,7 +6,6 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import { Link } from "gatsby";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
-import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
@@ -45,40 +44,29 @@ const SideDrawer = () => {
         >
             <List component="nav">
                 <ListItem button>
-                    <Typography variant="h6">
-                        <AnchorLink to="/#menu" title="Menu" className={classes.linkText} />
-                    </Typography>
+                    <AnchorLink to="/#menu" title="Menu" className={classes.linkText} />
                 </ListItem>
                 <ListItem button>
-                    <Typography variant="h6">
-                        <AnchorLink
-                            to="/#products"
-                            title="Products"
-                            className={classes.linkText}
-                        />
-                    </Typography>
+                    <AnchorLink
+                        to="/#products"
+                        title="Products"
+                        className={classes.linkText}
+                    />
                 </ListItem>
                 <ListItem button>
-                    <Typography variant="h6">
-                        <AnchorLink
-                            to="/#our-story"
-                            title="Our Story"
-                            className={classes.linkText}
-                        />
-                    </Typography>
+                    <AnchorLink
+                        to="/#our-story"
+                        title="Our Story"
+                        className={classes.linkText}
+                    />
                 </ListItem>
                 <ListItem button>
-                    <Typography variant="h6">
-                        <Link to="/about" title="About" className={classes.linkText}>
-                            About
+                    <Link to="/about" title="About Us" className={classes.linkText}>
+                        About
             </Link>
-                    </Typography>
                 </ListItem>
                 <ListItem button>
                     <ShoppingCartIcon className="snipcart-checkout" />
-                    <Typography variant="h6" className={classes.linkText}>
-                        Cart
-          </Typography>
                 </ListItem>
             </List>
         </div>

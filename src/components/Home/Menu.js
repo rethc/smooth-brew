@@ -19,7 +19,6 @@ const getCategories = (items) => {
   //The Array.from() static method creates a new, shallow-copied Array instance from an array-like or iterable object.
   let categories = Array.from(tempCategories);
   categories = ["all", ...categories];
-  console.log(categories);
   return categories;
 };
 
@@ -133,7 +132,6 @@ class Menu extends Component {
                               <Grid item xs>
                                 <Typography
                                   gutterBottom
-                                  variant="subtitle1"
                                   className={classes.itemText}
                                 >
                                   {node.title}
@@ -144,7 +142,6 @@ class Menu extends Component {
                               </Grid>
 
                               <Typography
-                                variant="body1"
                                 className={classes.itemPrice}
                               >
                                 $ {node.price}

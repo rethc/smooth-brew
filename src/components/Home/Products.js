@@ -99,7 +99,6 @@ const Products = () => {
                               />
                             </CardActionArea>
                             <Typography
-                              variant="subtitle1"
                               className={classes.productTitle}
                               gutterBottom
                             >

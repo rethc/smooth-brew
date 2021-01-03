@@ -81,7 +81,7 @@ const Layout = ({ children }) => {
                   className={classes.navDisplayFlex}
                 >
                   <ListItem button>
-                    <Typography variant="p">
+                    <Typography>
                       <AnchorLink
                         to="/#menu"
                         title="Menu"
@@ -90,7 +90,7 @@ const Layout = ({ children }) => {
                     </Typography>
                   </ListItem>
                   <ListItem button>
-                    <Typography variant="p">
+                    <Typography>
                       <AnchorLink
                         to="/#products"
                         title="Products"
@@ -99,7 +99,7 @@ const Layout = ({ children }) => {
                     </Typography>
                   </ListItem>
                   <ListItem button>
-                    <Typography variant="p">
+                    <Typography>
                       <AnchorLink
                         to="/#our-story"
                         title="Our Story"
@@ -108,7 +108,7 @@ const Layout = ({ children }) => {
                     </Typography>
                   </ListItem>
                   <ListItem button>
-                    <Typography variant="p">
+                    <Typography>
                       <Link
                         to="/about"
                         title="About"
