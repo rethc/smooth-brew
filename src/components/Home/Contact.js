@@ -33,7 +33,6 @@ const Contact = () => {
                         label="Your name"
                         variant="filled"
                         fullWidth
-                        margin="normal"
                     />
 
                     <TextField

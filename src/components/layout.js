@@ -57,6 +57,7 @@ const useStyles = makeStyles({
     color: "#D38D5F",
     marginTop: "0.25em",
     textAlign: "center",
+    fontSize: "small"
   },
 });
 
