@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => (
         img={data.img.childImageSharp.fluid}
         title="Smooth Brew"
         styleClass="default-background"
-        children="Serving only the Best Coffee in Wellington"
+        children="Smooth Brew is a café born in Wellington, pursuing freshness and hand-made quality above all else."
       />
       <Story />
       <Menu items={data.menu} />
@@ -36,10 +36,10 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   {
-    img: file(relativePath: { eq: "default-background.jpg" }) {
+    img: file(relativePath: { eq: "default-background.webp" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }

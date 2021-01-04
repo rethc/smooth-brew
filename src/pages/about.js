@@ -28,10 +28,10 @@ const AboutPage = ({ data }) => (
 
 export const query = graphql`
   {
-    img: file(relativePath: { eq: "about-background.jpg" }) {
+    img: file(relativePath: { eq: "about-background.webp" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
