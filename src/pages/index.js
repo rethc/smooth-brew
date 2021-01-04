@@ -26,7 +26,12 @@ const IndexPage = ({ data }) => (
         styleClass="default-background"
         children="Smooth Brew is a café born in Wellington, pursuing freshness and hand-made quality above all else."
       />
-      <Story storyCoffeeImage={data.storyCoffeeImage.childImageSharp.fluid} />
+      <Story
+        coffeeGallery1={data.coffeeGallery1.childImageSharp.fluid}
+        coffeeGallery2={data.coffeeGallery2.childImageSharp.fluid}
+        coffeeGallery3={data.coffeeGallery3.childImageSharp.fluid}
+        coffeeGallery4={data.coffeeGallery4.childImageSharp.fluid}
+      />
       <Menu items={data.menu} />
       <Products />
       <Contact />
@@ -61,13 +66,35 @@ export const query = graphql`
         }
       }
     }
-    storyCoffeeImage: file(relativePath: { eq:"story-image.webp"}) {
-    childImageSharp {
-      fluid {
-        ...GatsbyImageSharpFluid_withWebp_noBase64
+    coffeeGallery1: file(relativePath: { eq: "story-image1.webp" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
       }
     }
+    coffeeGallery2: file(relativePath: { eq: "story-image2.webp" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
     }
+    coffeeGallery3: file(relativePath: { eq: "story-image3.webp" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    coffeeGallery4: file(relativePath: { eq: "about-background.webp" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+
   }
 `;
 
