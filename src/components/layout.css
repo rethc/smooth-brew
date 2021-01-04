@@ -5,6 +5,9 @@
 p {
   font-size: large;
   font-family: "Roboto", sans-serif;
+}
+
+p.story-text {
   text-align: center;
 }
 

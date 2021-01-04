@@ -19,6 +19,9 @@ const useStyles = makeStyles({
     fontFamily: "Roboto",
     textShadow: "2px 4px 3px rgba(0,0,0,0.3)",
     marginBottom: "2em",
+    textAlign: "center",
+    marginLeft: "0.5em",
+    marginRight: "0.5em"
   },
   button: {
     background: "#D38D5F",
@@ -43,7 +46,7 @@ export default function BackgroundSection({
         <Typography variant="h2" className={classes.title}>
           {title}
         </Typography>
-        <Typography variant="subtitle1" className={classes.subtitle}>
+        <Typography className={classes.subtitle}>
           {children}
         </Typography>
         <Button variant="contained" className={classes.button}>
