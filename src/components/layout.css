@@ -11,6 +11,13 @@ p.story-text {
   text-align: center;
 }
 
+.story-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+}
+
 h3 {
   text-align: center;
   font-family: "Cabin", sans-serif;

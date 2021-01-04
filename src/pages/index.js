@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => (
         styleClass="default-background"
         children="Smooth Brew is a café born in Wellington, pursuing freshness and hand-made quality above all else."
       />
-      <Story />
+      <Story storyCoffeeImage={data.storyCoffeeImage.childImageSharp.fluid} />
       <Menu items={data.menu} />
       <Products />
       <Contact />
@@ -60,6 +60,13 @@ export const query = graphql`
           }
         }
       }
+    }
+    storyCoffeeImage: file(relativePath: { eq:"story-image.webp"}) {
+    childImageSharp {
+      fluid {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
+      }
+    }
     }
   }
 `;

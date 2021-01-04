@@ -1,8 +1,9 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
 import Title from "../Globals/Title";
+import Img from 'gatsby-image';
 
-const Story = () => {
+const Story = ({ storyCoffeeImage }) => {
   return (
     <section className="story">
       <div id="our-story">
@@ -23,6 +24,9 @@ const Story = () => {
           <p className="story-text">
             We hope you savor every moment of joy you experience here at Smooth Brew.
           </p>
+          <div className="story-image">
+            <Img fluid={storyCoffeeImage} />
+          </div>
           <h3>Our Coffee</h3>
           <p className="story-text">
             We opened our first location in Wellington as one of the first specialty roasters in the city. We’re still based in Wellington, the city we love; but now we’re sharing the joy of Smooth Brew far and wide, with fans all around the world.
