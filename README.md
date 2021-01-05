@@ -11,6 +11,7 @@
   <a href="https://twitter.com/intent/follow?screen_name=ChesdaReth">
     <img src="https://img.shields.io/twitter/follow/ChesdaReth?label=ChesdaReth&style=social" alt="Follow @ChesdaReth" />
   </a>
+  [![Netlify Status](https://api.netlify.com/api/v1/badges/284cebad-8dea-4383-b329-e88a28937586/deploy-status)](https://app.netlify.com/sites/smooth-brew/deploys)
 </p>
 
 Smooth brew is a responsive starter theme for an online coffee shop, powered by [Gatsby v2](https://www.gatsbyjs.org).
