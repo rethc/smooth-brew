@@ -32,13 +32,18 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-snipcartv3',
+      resolve: `gatsby-plugin-snipcart-advanced`,
       options: {
-        apiKey: process.env.GATSBY_SNIPCART_APIKEY,
-        autopop: false,
-        js: `https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.js`,
-        styles: `https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.css`
-      }
+        version: '3.0.27',
+        publicApiKey: process.env.GATSBY_SNIPCART_APIKEY,
+        defaultLang: 'en',
+        currency: 'nzd',
+        openCartOnAdd: true,
+        innerHTML: ` 
+        <checkout section="header" style="padding-top: 200px;">
+        Test
+         </checkout>`,
+      },
     },
     {
       resolve: "gatsby-plugin-anchor-links",
