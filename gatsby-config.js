@@ -28,7 +28,7 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       }
     },
     {
@@ -39,10 +39,6 @@ module.exports = {
         defaultLang: 'en',
         currency: 'nzd',
         openCartOnAdd: true,
-        innerHTML: ` 
-        <checkout section="header" style="padding-top: 200px;">
-        Test
-         </checkout>`,
       },
     },
     {

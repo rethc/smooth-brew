@@ -2,6 +2,10 @@
   margin-top: 0.2em;
 }
 
+.snipcart-modal__container {
+  padding-top: 4rem !important;
+}
+
 p {
   font-size: large;
   font-family: "Roboto", sans-serif;
